@@ -1,0 +1,54 @@
+{
+  "version": "stb-v6",
+  "changes": [
+    "stb-v2, after the practice read only: question 3's options reworded (own drivers must deliver goods or visit customers; carrying passengers, moving things inside one site, or customer-rented vehicles is 'not said'), because 5 of 30 practice answers were sure but wrong against a bar of 1 in 10. The line threshold moved from 0.5 to 0.2: at 0.5 only 6 of 15 practice picks counted; in 6 more the model picked a fair line with its bet spread over several similar lines. At 0.2, 12 of 15 are fair, over the written bar of 7 in 10.",
+    "stb-v3, after the practice reads only (the last rewording round the plan allows): question 3's 'own drivers' option again says a posting that hires a driver, courier or technician counts, and customer visits now mean going to customers to install, repair, service, pick up or deliver things; consultants, engineers, trainers and sales staff do not count. A separate AI review of the practice answers found that stb-v2 was 4 of 30 sure but wrong on its second read, over the bar.",
+    "stb-v4: question 3 (who makes the deliveries) and its line question were cut. After the two rewording rounds the plan allows, on 5 of 30 practice postings how sure it was crossed its 0.75 line when the options were put in reverse order, against a bar of 1 in 10. It never changed a company's group; it filled one line of the brief. Questions 1 and 2 are unchanged since stb-v1.",
+    "stb-v5 (version 2 of the build, 11/22/2026), written after version 1's results and reviews: question 1 also counts delivery run through outside carriers or delivery partners the employer manages; question 2's delivery operations management names transportation and outside carriers, and dispatch or routing names planning loads and booking carriers. The job titles read now include logistics, transportation, routing, route and field technician. Tested on a new practice draw of 30 postings from other companies before the second freeze.",
+    "stb-v6 (the one rewording round, before the second freeze): a separate AI review of the stb-v5 practice reads found that question 1 as asked was broader than labeling rules version 3 (it did not say the carrier clause covers only the employer's own goods to its customers or between its own sites, and said 'chooses and manages' where the rules say 'chooses, schedules or manages'), that 'carriers' could be read as phone carriers, and that the model read a rideshare fleet as yes on every read. Question 1 now uses the rules' own words, says freight or parcel carriers, and says carrying passengers is not delivering goods; the line question no longer says 'itself'. The rules did not change, so the answer key stays valid."
+  ],
+  "what_this_is": "The fixed questions the model answers about each posting, and the 'which line' question. First written before any model call; changed on the practice set only, as listed in 'changes'; version 2 of the build (stb-v5) changed question 1 after version 1's results had been seen, and was tested on a new practice draw before the second freeze. The careful answer is listed first in every question, because the vendor says the model leans toward the first option. The model sees only the posting's title, its place line and its text in numbered lines.",
+  "thresholds": {
+    "q1": 0.8,
+    "q2": 0.8,
+    "line": 0.2
+  },
+  "thresholds_at_start": {
+    "q1": 0.8,
+    "q2": 0.8,
+    "line": 0.5
+  },
+  "questions": {
+    "own_operation": {
+      "type": "choice",
+      "instructions": "Read `posting.title` and `posting.text`. Does the employer that wrote this posting deliver goods, run routes, dispatch drivers or technicians, keep a fleet of vehicles for delivering goods or for visits to customers, or send workers out to customers to install, repair, service, pick up or deliver things? It counts when it does this with people or vehicles it employs or directs, or when it delivers its own goods to its customers or between its own sites through outside freight or parcel carriers or delivery partners that it chooses, schedules or manages. Carrying passengers is not delivering goods.",
+      "criteria": {
+        "not_said": "The posting does not say whether the employer runs deliveries, routes, dispatch, a fleet or visits to customers.",
+        "no": "The employer does not run such an operation. The delivery-type words are about software, data, projects, training, content, patient care, a driver's licence, carrying passengers, dispatching workers who are not drivers or technicians, or moving things only inside one building, lot, base or campus.",
+        "yes": "The posting says the employer runs deliveries, routes, dispatch of drivers or technicians, a fleet for that work, or visits to customers, with people or vehicles it employs or directs, or delivers its own goods to its customers or between its own sites through outside freight or parcel carriers or delivery partners it chooses, schedules or manages. This is still yes when the job in this posting is an office, management or software job."
+      }
+    },
+    "role_kind": {
+      "type": "choice",
+      "instructions": "Read `posting.title` and `posting.text`. What would the person hired for this job mainly do day to day? Judge the duties described in `posting.text`, not only the title.",
+      "criteria": {
+        "other": "None of the other options: sales, marketing, finance, people team, recruiting, customer support, training, clinical care, kitchen or shop-floor work, driving passengers, IT support, program or project management, or general management outside delivery operations.",
+        "software_or_data": "Builds or analyses software, data, products or designs, including on a team named delivery, logistics, dispatch or fleet.",
+        "warehouse_or_store": "Picks, packs, stocks, loads or serves inside a warehouse, kitchen or store, or drives a forklift or moves things only inside a lot, yard, base or campus, with no driving to customers and no managing of drivers.",
+        "field_technician": "Travels to customers to install, repair, inspect or service something.",
+        "fleet_management": "Looks after the vehicles or the drivers' compliance: buying, maintenance and repair of the employer's own vehicles, safety, DOT compliance, fleet records.",
+        "delivery_operations_management": "Manages the delivery of goods: delivery, last-mile, logistics, transportation or driver teams, a delivery station, or outside carriers and delivery partners, without mainly driving or dispatching.",
+        "dispatch_or_routing": "Assigns drivers or technicians to jobs, plans routes or loads, books carriers for shipments, or watches deliveries and jobs during the day.",
+        "driving_or_courier": "Drives, rides or walks to deliver goods to customers or between sites, or drives a truck on a route to pick up or haul things for customers, such as junk removal, medical waste pick-up or towing."
+      }
+    }
+  },
+  "line_questions": {
+    "own_operation_line": {
+      "parent": "own_operation",
+      "instructions": "Which line of `posting.text` most directly shows whether the employer runs deliveries, routes, dispatch, a fleet or visits to customers, itself or through carriers it manages? Pick none if no line shows it.",
+      "none": "No line of the posting shows this."
+    }
+  },
+  "build_version": "2"
+}

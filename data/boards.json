@@ -1,0 +1,718 @@
+{
+ "what_this_is": "The fixed list of public job boards this build reads. Chosen while planning: company names were tried on three job-board systems, and each board that answered was checked one board at a time. Not complete. The market is my label, from the Nash page named in markets.json; Nash's own labels would replace it.",
+ "boards": [
+  {
+   "company": "Insomnia Cookies",
+   "system": "lever",
+   "board": "insomniacookies",
+   "board_url": "https://jobs.lever.co/insomniacookies",
+   "market": "restaurants and catering",
+   "name_forms": [
+    "Insomnia Cookies",
+    "Insomnia"
+   ]
+  },
+  {
+   "company": "Carvana",
+   "system": "greenhouse",
+   "board": "carvana",
+   "board_url": "https://boards.greenhouse.io/carvana",
+   "market": "retail",
+   "name_forms": [
+    "Carvana"
+   ]
+  },
+  {
+   "company": "Daniels Health",
+   "system": "greenhouse",
+   "board": "danielshealth",
+   "board_url": "https://boards.greenhouse.io/danielshealth",
+   "market": "pharmacy and healthcare",
+   "name_forms": [
+    "Daniels Health"
+   ]
+  },
+  {
+   "company": "Misfits Market",
+   "system": "greenhouse",
+   "board": "misfitsmarket",
+   "board_url": "https://boards.greenhouse.io/misfitsmarket",
+   "market": "grocery and convenience",
+   "name_forms": [
+    "Misfits Market"
+   ]
+  },
+  {
+   "company": "Odeko",
+   "system": "greenhouse",
+   "board": "odeko",
+   "board_url": "https://boards.greenhouse.io/odeko",
+   "market": "wholesale distribution",
+   "name_forms": [
+    "Odeko"
+   ]
+  },
+  {
+   "company": "Sila Services",
+   "system": "lever",
+   "board": "sila",
+   "board_url": "https://jobs.lever.co/sila",
+   "market": "field services",
+   "name_forms": [
+    "Sila Services",
+    "Sila"
+   ]
+  },
+  {
+   "company": "Mom's Meals",
+   "system": "lever",
+   "board": "momsmeals",
+   "board_url": "https://jobs.lever.co/momsmeals",
+   "market": "pharmacy and healthcare",
+   "name_forms": [
+    "Mom's Meals"
+   ]
+  },
+  {
+   "company": "1-800-GOT-JUNK",
+   "system": "greenhouse",
+   "board": "1800gotjunk",
+   "board_url": "https://boards.greenhouse.io/1800gotjunk",
+   "market": "field services",
+   "name_forms": [
+    "1-800-GOT-JUNK"
+   ],
+   "display_name": "1-800-GOT-JUNK (Southwind franchise group)"
+  },
+  {
+   "company": "HelloFresh",
+   "system": "greenhouse",
+   "board": "hellofresh",
+   "board_url": "https://boards.greenhouse.io/hellofresh",
+   "market": "grocery and convenience",
+   "name_forms": [
+    "HelloFresh"
+   ]
+  },
+  {
+   "company": "Mom's Meals",
+   "system": "greenhouse",
+   "board": "momsmeals",
+   "board_url": "https://boards.greenhouse.io/momsmeals",
+   "market": "pharmacy and healthcare",
+   "name_forms": [
+    "Mom's Meals"
+   ]
+  },
+  {
+   "company": "CookUnity",
+   "system": "greenhouse",
+   "board": "cookunity",
+   "board_url": "https://boards.greenhouse.io/cookunity",
+   "market": "grocery and convenience",
+   "name_forms": [
+    "CookUnity"
+   ]
+  },
+  {
+   "company": "Grove Collaborative",
+   "system": "greenhouse",
+   "board": "grovecollaborative",
+   "board_url": "https://boards.greenhouse.io/grovecollaborative",
+   "market": "grocery and convenience",
+   "name_forms": [
+    "Grove Collaborative"
+   ]
+  },
+  {
+   "company": "Service Champions",
+   "system": "greenhouse",
+   "board": "servicechampions",
+   "board_url": "https://boards.greenhouse.io/servicechampions",
+   "market": "field services",
+   "name_forms": [
+    "Service Champions"
+   ]
+  },
+  {
+   "company": "Thuma",
+   "system": "lever",
+   "board": "thuma",
+   "board_url": "https://jobs.lever.co/thuma",
+   "market": "retail",
+   "name_forms": [
+    "Thuma"
+   ]
+  },
+  {
+   "company": "1-800 Contacts",
+   "system": "greenhouse",
+   "board": "1800contacts",
+   "board_url": "https://boards.greenhouse.io/1800contacts",
+   "market": "pharmacy and healthcare",
+   "name_forms": [
+    "1-800 Contacts"
+   ]
+  },
+  {
+   "company": "BARK",
+   "system": "greenhouse",
+   "board": "bark",
+   "board_url": "https://boards.greenhouse.io/bark",
+   "market": "retail",
+   "name_forms": [
+    "BARK"
+   ]
+  },
+  {
+   "company": "Blink Health",
+   "system": "greenhouse",
+   "board": "blinkhealth",
+   "board_url": "https://boards.greenhouse.io/blinkhealth",
+   "market": "pharmacy and healthcare",
+   "name_forms": [
+    "Blink Health"
+   ]
+  },
+  {
+   "company": "Block Renovation",
+   "system": "greenhouse",
+   "board": "blockrenovation",
+   "board_url": "https://boards.greenhouse.io/blockrenovation",
+   "market": "field services",
+   "name_forms": [
+    "Block Renovation"
+   ]
+  },
+  {
+   "company": "Blue Bottle Coffee",
+   "system": "lever",
+   "board": "bluebottlecoffee",
+   "board_url": "https://jobs.lever.co/bluebottlecoffee",
+   "market": "restaurants and catering",
+   "name_forms": [
+    "Blue Bottle Coffee"
+   ]
+  },
+  {
+   "company": "Brooklinen",
+   "system": "ashby",
+   "board": "brooklinen",
+   "board_url": "https://jobs.ashbyhq.com/brooklinen",
+   "market": "retail",
+   "name_forms": [
+    "Brooklinen"
+   ]
+  },
+  {
+   "company": "ButcherBox",
+   "system": "greenhouse",
+   "board": "butcherbox",
+   "board_url": "https://boards.greenhouse.io/butcherbox",
+   "market": "grocery and convenience",
+   "name_forms": [
+    "ButcherBox"
+   ]
+  },
+  {
+   "company": "Capsule",
+   "system": "ashby",
+   "board": "capsule",
+   "board_url": "https://jobs.ashbyhq.com/capsule",
+   "market": "pharmacy and healthcare",
+   "name_forms": [
+    "Capsule"
+   ]
+  },
+  {
+   "company": "Castlery",
+   "system": "greenhouse",
+   "board": "castlery",
+   "board_url": "https://boards.greenhouse.io/castlery",
+   "market": "retail",
+   "name_forms": [
+    "Castlery"
+   ]
+  },
+  {
+   "company": "Crumbl",
+   "system": "lever",
+   "board": "crumbl",
+   "board_url": "https://jobs.lever.co/crumbl",
+   "market": "restaurants and catering",
+   "name_forms": [
+    "Crumbl"
+   ]
+  },
+  {
+   "company": "Cuyana",
+   "system": "greenhouse",
+   "board": "cuyana",
+   "board_url": "https://boards.greenhouse.io/cuyana",
+   "market": "retail",
+   "name_forms": [
+    "Cuyana"
+   ]
+  },
+  {
+   "company": "Dig",
+   "system": "greenhouse",
+   "board": "diginn",
+   "board_url": "https://boards.greenhouse.io/diginn",
+   "market": "restaurants and catering",
+   "name_forms": [
+    "Dig"
+   ]
+  },
+  {
+   "company": "Eight Sleep",
+   "system": "ashby",
+   "board": "eightsleep",
+   "board_url": "https://jobs.ashbyhq.com/eightsleep",
+   "market": "retail",
+   "name_forms": [
+    "Eight Sleep"
+   ]
+  },
+  {
+   "company": "FloWater",
+   "system": "greenhouse",
+   "board": "flowater",
+   "board_url": "https://boards.greenhouse.io/flowater",
+   "market": "wholesale distribution",
+   "name_forms": [
+    "FloWater"
+   ]
+  },
+  {
+   "company": "GT's Living Foods",
+   "system": "greenhouse",
+   "board": "gtslivingfoods",
+   "board_url": "https://boards.greenhouse.io/gtslivingfoods",
+   "market": "wholesale distribution",
+   "name_forms": [
+    "GT's Living Foods"
+   ]
+  },
+  {
+   "company": "Getlabs",
+   "system": "lever",
+   "board": "getlabs",
+   "board_url": "https://jobs.lever.co/getlabs",
+   "market": "pharmacy and healthcare",
+   "name_forms": [
+    "Getlabs"
+   ]
+  },
+  {
+   "company": "Glossier",
+   "system": "greenhouse",
+   "board": "glossier",
+   "board_url": "https://boards.greenhouse.io/glossier",
+   "market": "retail",
+   "name_forms": [
+    "Glossier"
+   ]
+  },
+  {
+   "company": "Hungryroot",
+   "system": "greenhouse",
+   "board": "hungryroot",
+   "board_url": "https://boards.greenhouse.io/hungryroot",
+   "market": "grocery and convenience",
+   "name_forms": [
+    "Hungryroot"
+   ]
+  },
+  {
+   "company": "Juneshine",
+   "system": "lever",
+   "board": "juneshine",
+   "board_url": "https://jobs.lever.co/juneshine",
+   "market": "wholesale distribution",
+   "name_forms": [
+    "Juneshine"
+   ]
+  },
+  {
+   "company": "Kitchfix",
+   "system": "greenhouse",
+   "board": "kitchfix",
+   "board_url": "https://boards.greenhouse.io/kitchfix",
+   "market": "grocery and convenience",
+   "name_forms": [
+    "Kitchfix"
+   ]
+  },
+  {
+   "company": "Lessen",
+   "system": "lever",
+   "board": "lessen",
+   "board_url": "https://jobs.lever.co/lessen",
+   "market": "field services",
+   "name_forms": [
+    "Lessen"
+   ]
+  },
+  {
+   "company": "Liquid Death",
+   "system": "greenhouse",
+   "board": "liquiddeath",
+   "board_url": "https://boards.greenhouse.io/liquiddeath",
+   "market": "wholesale distribution",
+   "name_forms": [
+    "Liquid Death"
+   ]
+  },
+  {
+   "company": "Little Spoon",
+   "system": "greenhouse",
+   "board": "littlespoon",
+   "board_url": "https://boards.greenhouse.io/littlespoon",
+   "market": "restaurants and catering",
+   "name_forms": [
+    "Little Spoon"
+   ]
+  },
+  {
+   "company": "McMaster-Carr",
+   "system": "greenhouse",
+   "board": "mcmastercarr",
+   "board_url": "https://boards.greenhouse.io/mcmastercarr",
+   "market": "wholesale distribution",
+   "name_forms": [
+    "McMaster-Carr"
+   ]
+  },
+  {
+   "company": "Natera",
+   "system": "greenhouse",
+   "board": "natera",
+   "board_url": "https://boards.greenhouse.io/natera",
+   "market": "pharmacy and healthcare",
+   "name_forms": [
+    "Natera"
+   ]
+  },
+  {
+   "company": "Nom Nom",
+   "system": "greenhouse",
+   "board": "nomnom",
+   "board_url": "https://boards.greenhouse.io/nomnom",
+   "market": "retail",
+   "name_forms": [
+    "Nom Nom"
+   ]
+  },
+  {
+   "company": "Olipop",
+   "system": "greenhouse",
+   "board": "olipop",
+   "board_url": "https://boards.greenhouse.io/olipop",
+   "market": "wholesale distribution",
+   "name_forms": [
+    "Olipop"
+   ]
+  },
+  {
+   "company": "Ollie",
+   "system": "lever",
+   "board": "myollie",
+   "board_url": "https://jobs.lever.co/myollie",
+   "market": "retail",
+   "name_forms": [
+    "Ollie"
+   ]
+  },
+  {
+   "company": "Parachute",
+   "system": "greenhouse",
+   "board": "parachutehome",
+   "board_url": "https://boards.greenhouse.io/parachutehome",
+   "market": "retail",
+   "name_forms": [
+    "Parachute"
+   ]
+  },
+  {
+   "company": "Peloton",
+   "system": "greenhouse",
+   "board": "peloton",
+   "board_url": "https://boards.greenhouse.io/peloton",
+   "market": "retail",
+   "name_forms": [
+    "Peloton"
+   ]
+  },
+  {
+   "company": "Quilt",
+   "system": "greenhouse",
+   "board": "quilt",
+   "board_url": "https://boards.greenhouse.io/quilt",
+   "market": "field services",
+   "name_forms": [
+    "Quilt"
+   ]
+  },
+  {
+   "company": "Quince",
+   "system": "greenhouse",
+   "board": "quince",
+   "board_url": "https://boards.greenhouse.io/quince",
+   "market": "retail",
+   "name_forms": [
+    "Quince"
+   ]
+  },
+  {
+   "company": "Rebag",
+   "system": "greenhouse",
+   "board": "rebag",
+   "board_url": "https://boards.greenhouse.io/rebag",
+   "market": "retail",
+   "name_forms": [
+    "Rebag"
+   ]
+  },
+  {
+   "company": "Rent the Runway",
+   "system": "greenhouse",
+   "board": "renttherunway",
+   "board_url": "https://boards.greenhouse.io/renttherunway",
+   "market": "retail",
+   "name_forms": [
+    "Rent the Runway"
+   ]
+  },
+  {
+   "company": "Ro",
+   "system": "lever",
+   "board": "ro",
+   "board_url": "https://jobs.lever.co/ro",
+   "market": "pharmacy and healthcare",
+   "name_forms": [
+    "Ro"
+   ]
+  },
+  {
+   "company": "Ruggable",
+   "system": "greenhouse",
+   "board": "ruggable",
+   "board_url": "https://boards.greenhouse.io/ruggable",
+   "market": "retail",
+   "name_forms": [
+    "Ruggable"
+   ]
+  },
+  {
+   "company": "Saatva",
+   "system": "greenhouse",
+   "board": "saatva",
+   "board_url": "https://boards.greenhouse.io/saatva",
+   "market": "retail",
+   "name_forms": [
+    "Saatva"
+   ]
+  },
+  {
+   "company": "Service Wizard",
+   "system": "greenhouse",
+   "board": "servicewizard",
+   "board_url": "https://boards.greenhouse.io/servicewizard",
+   "market": "field services",
+   "name_forms": [
+    "Service Wizard"
+   ]
+  },
+  {
+   "company": "Shields Health Solutions",
+   "system": "greenhouse",
+   "board": "shieldshealthsolutions",
+   "board_url": "https://boards.greenhouse.io/shieldshealthsolutions",
+   "market": "pharmacy and healthcare",
+   "name_forms": [
+    "Shields Health Solutions"
+   ]
+  },
+  {
+   "company": "SimpliSafe",
+   "system": "greenhouse",
+   "board": "simplisafe",
+   "board_url": "https://boards.greenhouse.io/simplisafe",
+   "market": "field services",
+   "name_forms": [
+    "SimpliSafe"
+   ]
+  },
+  {
+   "company": "Smalls",
+   "system": "ashby",
+   "board": "smalls",
+   "board_url": "https://jobs.ashbyhq.com/smalls",
+   "market": "retail",
+   "name_forms": [
+    "Smalls"
+   ]
+  },
+  {
+   "company": "Spot & Tango",
+   "system": "greenhouse",
+   "board": "spotandtango",
+   "board_url": "https://boards.greenhouse.io/spotandtango",
+   "market": "retail",
+   "name_forms": [
+    "Spot & Tango"
+   ]
+  },
+  {
+   "company": "Sunnova",
+   "system": "greenhouse",
+   "board": "sunnova",
+   "board_url": "https://boards.greenhouse.io/sunnova",
+   "market": "field services",
+   "name_forms": [
+    "Sunnova"
+   ]
+  },
+  {
+   "company": "Synapse Health",
+   "system": "greenhouse",
+   "board": "synapsehealth",
+   "board_url": "https://boards.greenhouse.io/synapsehealth",
+   "market": "pharmacy and healthcare",
+   "name_forms": [
+    "Synapse Health"
+   ]
+  },
+  {
+   "company": "The Farmer's Dog",
+   "system": "greenhouse",
+   "board": "thefarmersdog",
+   "board_url": "https://boards.greenhouse.io/thefarmersdog",
+   "market": "retail",
+   "name_forms": [
+    "The Farmer's Dog"
+   ]
+  },
+  {
+   "company": "Thrive Market",
+   "system": "greenhouse",
+   "board": "thrivemarket",
+   "board_url": "https://boards.greenhouse.io/thrivemarket",
+   "market": "grocery and convenience",
+   "name_forms": [
+    "Thrive Market"
+   ]
+  },
+  {
+   "company": "Tomorrow Health",
+   "system": "greenhouse",
+   "board": "tomorrowhealth",
+   "board_url": "https://boards.greenhouse.io/tomorrowhealth",
+   "market": "pharmacy and healthcare",
+   "name_forms": [
+    "Tomorrow Health"
+   ]
+  },
+  {
+   "company": "Tonal",
+   "system": "ashby",
+   "board": "tonal",
+   "board_url": "https://jobs.ashbyhq.com/tonal",
+   "market": "retail",
+   "name_forms": [
+    "Tonal"
+   ]
+  },
+  {
+   "company": "Tovala",
+   "system": "lever",
+   "board": "tovala",
+   "board_url": "https://jobs.lever.co/tovala",
+   "market": "grocery and convenience",
+   "name_forms": [
+    "Tovala"
+   ]
+  },
+  {
+   "company": "Van Leeuwen Ice Cream",
+   "system": "greenhouse",
+   "board": "vanleeuwenicecream",
+   "board_url": "https://boards.greenhouse.io/vanleeuwenicecream",
+   "market": "restaurants and catering",
+   "name_forms": [
+    "Van Leeuwen Ice Cream"
+   ]
+  },
+  {
+   "company": "Vital Farms",
+   "system": "greenhouse",
+   "board": "vitalfarms",
+   "board_url": "https://boards.greenhouse.io/vitalfarms",
+   "market": "wholesale distribution",
+   "name_forms": [
+    "Vital Farms"
+   ]
+  },
+  {
+   "company": "Weee",
+   "system": "greenhouse",
+   "board": "weee",
+   "board_url": "https://boards.greenhouse.io/weee",
+   "market": "grocery and convenience",
+   "name_forms": [
+    "Weee"
+   ]
+  },
+  {
+   "company": "Window Nation",
+   "system": "lever",
+   "board": "windownation",
+   "board_url": "https://jobs.lever.co/windownation",
+   "market": "field services",
+   "name_forms": [
+    "Window Nation"
+   ]
+  },
+  {
+   "company": "Yerba Madre",
+   "system": "greenhouse",
+   "board": "yerbamadre",
+   "board_url": "https://boards.greenhouse.io/yerbamadre",
+   "market": "wholesale distribution",
+   "name_forms": [
+    "Yerba Madre"
+   ]
+  },
+  {
+   "company": "ZeroCater",
+   "system": "greenhouse",
+   "board": "zerocater",
+   "board_url": "https://boards.greenhouse.io/zerocater",
+   "market": "restaurants and catering",
+   "name_forms": [
+    "ZeroCater"
+   ]
+  },
+  {
+   "company": "Zoro",
+   "system": "greenhouse",
+   "board": "zoro",
+   "board_url": "https://boards.greenhouse.io/zoro",
+   "market": "wholesale distribution",
+   "name_forms": [
+    "Zoro"
+   ]
+  },
+  {
+   "company": "iFIT",
+   "system": "greenhouse",
+   "board": "ifit",
+   "board_url": "https://boards.greenhouse.io/ifit",
+   "market": "retail",
+   "name_forms": [
+    "iFIT"
+   ]
+  }
+ ]
+}

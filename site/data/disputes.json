@@ -1,0 +1,59 @@
+{
+ "what_this_is": "Every disagreement between the version 2 answer key and the blind second labeling, looked at after the raw agreement was saved. Where the written rules (version 3) were clear, they settled it; where they were not, it is logged as 'rule unclear' and the key's answer was kept. No answer in the key changed.",
+ "disputes": [
+  {
+   "posting_id": "4515467009",
+   "question": "q2",
+   "key": "driving_or_courier",
+   "second": "other",
+   "settled": "key kept",
+   "log": "rule unclear",
+   "why": "The rules name junk removal under driving or courier and the title is a route driver, but the listed duties are removal work and sales and never describe driving; the rules do not say how much weight the title gets then."
+  },
+  {
+   "posting_id": "8185708",
+   "question": "q2",
+   "key": "other",
+   "second": "software_or_data",
+   "settled": "key kept",
+   "log": "second labeler was wrong",
+   "why": "The duties are mainly order processing and fulfilment coordination; the version 3 rules put a logistics job under software or data only when it mainly builds software or analyses data, which this does not."
+  },
+  {
+   "posting_id": "7998340003",
+   "question": "q2",
+   "key": "delivery_operations_management",
+   "second": "dispatch_or_routing",
+   "settled": "key kept",
+   "log": "rule unclear",
+   "why": "The supervisor leads the logistics team for the shift and manages carrier partners, and also does dispatch-style work (pickup times, route coverage); the rules give no tie-break. Both answers are operations work, so the first score is the same either way."
+  },
+  {
+   "posting_id": "8935278002",
+   "question": "q1",
+   "key": "yes",
+   "second": "not_said",
+   "settled": "key kept",
+   "log": "rule unclear",
+   "why": "One line says the employer provides prescription home delivery; the rules do not say whether a passing mention of a delivery service shows the employer runs or manages deliveries."
+  },
+  {
+   "posting_id": "6216611004",
+   "question": "q2",
+   "key": "other",
+   "second": "warehouse_or_store",
+   "settled": "key kept",
+   "log": "second labeler was wrong",
+   "why": "A fully remote coordinator of inbound receiving and inventory does not pick, pack or stock inside a warehouse, so the rules give other."
+  },
+  {
+   "posting_id": "ab504f2c-d125-4a99-a6ad-2e8e940494c6",
+   "question": "q1",
+   "key": "yes",
+   "second": "not_said",
+   "settled": "key kept",
+   "log": "rule unclear",
+   "why": "One line says the employer's platform spans delivery of medication; the rules do not say whether that passing mention shows the employer runs or manages deliveries."
+  }
+ ]
+}

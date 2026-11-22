@@ -1,0 +1,74 @@
+{
+ "what_this_is": "How often the answer key and the blind second labeling agreed, saved before any disagreement was looked at.",
+ "postings": 78,
+ "q1_agree": 76,
+ "q2_agree": 74,
+ "q1_key_counts": {
+  "yes": 74,
+  "not_said": 3,
+  "no": 1
+ },
+ "q1_second_counts": {
+  "yes": 72,
+  "not_said": 5,
+  "no": 1
+ },
+ "q2_key_counts": {
+  "driving_or_courier": 44,
+  "delivery_operations_management": 15,
+  "fleet_management": 2,
+  "dispatch_or_routing": 6,
+  "software_or_data": 5,
+  "other": 4,
+  "warehouse_or_store": 1,
+  "field_technician": 1
+ },
+ "q2_second_counts": {
+  "driving_or_courier": 43,
+  "delivery_operations_management": 14,
+  "fleet_management": 2,
+  "dispatch_or_routing": 7,
+  "other": 3,
+  "software_or_data": 6,
+  "warehouse_or_store": 2,
+  "field_technician": 1
+ },
+ "disagreements": [
+  {
+   "posting_id": "4515467009",
+   "question": "q2",
+   "key": "driving_or_courier",
+   "second": "other"
+  },
+  {
+   "posting_id": "8185708",
+   "question": "q2",
+   "key": "other",
+   "second": "software_or_data"
+  },
+  {
+   "posting_id": "7998340003",
+   "question": "q2",
+   "key": "delivery_operations_management",
+   "second": "dispatch_or_routing"
+  },
+  {
+   "posting_id": "8935278002",
+   "question": "q1",
+   "key": "yes",
+   "second": "not_said"
+  },
+  {
+   "posting_id": "6216611004",
+   "question": "q2",
+   "key": "other",
+   "second": "warehouse_or_store"
+  },
+  {
+   "posting_id": "ab504f2c-d125-4a99-a6ad-2e8e940494c6",
+   "question": "q1",
+   "key": "yes",
+   "second": "not_said"
+  }
+ ]
+}

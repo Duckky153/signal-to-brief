@@ -1,0 +1,49 @@
+{
+ "what_this_is": "One plain line for each change logged in lock.json after a freeze, in the same order, one line for each version after the first, the numbers of the changes that moved a score or a company, and a note on the one-time rewording. The page shows these; lock.json keeps each full reason and fingerprint. A test checks there is one line per change.",
+ "notes": [
+  "Counts of 1 read in the singular (\"1 role\", not \"1 roles\"). No score changed.",
+  "The simple title rule got a plain name instead of a planning name. No score changed.",
+  "Code tidying in the published data code; no logic changed. No score changed.",
+  "Code tidying in the reading script, which now also refuses any paid AI call without its spend check. No score changed.",
+  "Reasons and brief lines reworded: a Brief ready reason gives the job's first posting date, and the unsure reason names the question. No company changed group.",
+  "Postings the rules did not settle are left out of the score they could change. First row: the AI 57 to 56 match (on 58); the title rule 56 to 54; the common answer 55 to 53. Quote row: 55 to 53.",
+  "The title rule's script got its plain name. No answer changed.",
+  "The title rule's saved answers got the same plain name. No answer changed.",
+  "Leadership hires listed first; the question for a first message tied to the hire; old jobs outside the US or read as other work left out of the brief. No company changed group.",
+  "Fuller notes on the test: when questions 1 and 2 were written, how they did on practice, and the counts on all 60. No score changed.",
+  "One note on the questions now says a separate AI review did the check. No question changed.",
+  "The answer key's description says AI assistants wrote it and no person labeled. No answer changed.",
+  "The disagreements file says plainly which cases the rules did not settle. No answer changed.",
+  "Code tidying in the reading script's comments; no logic changed. No score changed.",
+  "Code tidying in two comments of the title rule's script; no logic changed. No answer changed.",
+  "Plain words in the test section, and fewer repeated notes. No score changed.",
+  "A new delivery job whose place cannot be read (for example only \"Remote\") goes to a person instead of being skipped. One company moved: Vital Farms, to Needs a person. No score changed.",
+  "The sorting list names that step. No score changed.",
+  "Text on the test section brought up to version 2. No score changed.",
+  "The place check reads US states first and knows more countries: three jobs abroad now read as outside the US. The 1-800-GOT-JUNK board is named for its franchise group. Tools and reporting lines found by plain code. No score changed.",
+  "Word patterns for tools and reporting lines added to the rules. No score changed.",
+  "Senior leadership hires that stand out come first (Thuma is now the first brief); briefs quote the tools a posting names; notes use its reporting line. No company changed group.",
+  "The test section shows question 1 as asked, the full sorting list, and the scores split between postings also in version 1 and new ones. No score changed.",
+  "The answer key's description says it was written before version 2's run, and that the model had read 53 of these postings in version 1. No answer changed.",
+  "The second labeling's description no longer names a tool. No answer changed.",
+  "The question names only tools from the posting the notes stand on; recruiting jobs left out of old-role lines; a reporting line into procurement or finance gets a note. No company changed group.",
+  "Clustered dates described as 'no more than 14 days apart'. No score changed.",
+  "Code tidying: the reading script's help text corrected. No score changed.",
+  "Final reviews, decision code: a quote from another posting names it; generic words never listed as tools; delivery software listed first, with its own question; a line on where the hire fits Nash; the procurement note reads only the reporting clause. No company changed group.",
+  "Final reviews, scorer: the top of the page states the result; the version 1 and new split is a small table; plainer notes on which boards can be seen and on owners. No score changed.",
+  "The title rule's script also runs when its folder's path has a space. No answer changed.",
+  "Code tidying in the reading script: the account-wide limit is kept outside the repo. No score changed.",
+  "An unused field (a link to a Nash industry page) taken out of the company data. No number changed.",
+  "Re-check fixes, decision code: on a Needs a person company the proof line comes from the job the row is about (Daniels Health). No company changed group.",
+  "Re-check fixes, scorer: the top of the page also states the title rule's result; the boards note no longer repeats itself. No score changed.",
+  "Re-check fixes: up to three tool lines per posting, each with a new name, so Sila's dispatch software is no longer missed. No number changed."
+ ],
+ "versions": {
+  "2": "Version 2 reads logistics, transportation, routing and field technician jobs, counts delivery through carriers the company manages, gives leadership roles 60 days, and sends an unsure answer to a person only when the job could still qualify. It was written after version 1's results were seen; 53 of its 78 test postings were also in version 1."
+ },
+ "moved": [
+  6,
+  17
+ ],
+ "reworded": "On 11/22/2026 the descriptions inside the log were reworded once, to take out internal names. The files' fingerprints and the dates did not change, but each entry's link to the one before it was computed again, so the chain shows only that no entry was edited after that rewording, not since either freeze."
+}

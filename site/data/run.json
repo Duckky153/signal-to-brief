@@ -1,0 +1,23 @@
+{
+ "read_date": "2026-11-21",
+ "client": "research-prototype/0.1",
+ "snapshot_checksum": "a8bd91620eaef9f0ee7a3a0f13f8bcc6d1cc8028c1b706c186864f0f01d277dd",
+ "boards_listed": 71,
+ "boards_answered": 71,
+ "boards_not_answered": [],
+ "postings_read": 5404,
+ "boards_not_shown": [
+  {
+   "company": "Ollie",
+   "system": "lever",
+   "named_by": 1
+  }
+ ],
+ "stopped_hosts": [],
+ "companies_with_title": 21,
+ "boards_with_title": 22,
+ "boards_without_title": 48,
+ "role_texts_read": 78,
+ "role_texts_without_text": 0,
+ "title_words": "delivery, deliveries, delivering, dispatch, dispatcher(s), driver(s), courier(s), fleet(s), last mile, logistics, transportation, routing, route(s), field technician(s), field service technician(s)"
+}

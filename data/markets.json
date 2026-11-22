@@ -1,0 +1,35 @@
+{
+ "what_this_is": "My market labels, each drawn from one public Nash industry page. They decide no group. They pick only the role named in the notes for a first message.",
+ "markets": [
+  {
+   "label": "retail",
+   "nash_page": "https://www.nash.ai/retail",
+   "notes_role": "the person who runs delivery or last-mile operations"
+  },
+  {
+   "label": "pharmacy and healthcare",
+   "nash_page": "https://www.nash.ai/healthcare",
+   "notes_role": "the person who runs delivery or fulfillment operations"
+  },
+  {
+   "label": "grocery and convenience",
+   "nash_page": "https://www.nash.ai/grocery",
+   "notes_role": "the person who runs delivery or e-commerce operations"
+  },
+  {
+   "label": "field services",
+   "nash_page": "https://www.nash.ai/field-services",
+   "notes_role": "the person who runs dispatch and field operations"
+  },
+  {
+   "label": "wholesale distribution",
+   "nash_page": "https://www.nash.ai/distribution",
+   "notes_role": "the person who runs routing and fleet operations"
+  },
+  {
+   "label": "restaurants and catering",
+   "nash_page": "https://www.nash.ai/restaurants",
+   "notes_role": "the person who runs delivery or off-premise operations"
+  }
+ ]
+}

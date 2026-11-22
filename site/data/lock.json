@@ -1,0 +1,595 @@
+{
+ "entries": [
+  {
+   "kind": "lock",
+   "date": "2026-11-21T22:24:53",
+   "private_commit": "ec4955430886e62c70b87cbc78976f066853b2a2",
+   "files": {
+    "cache/role-texts.json": {
+     "sha256": "f127be46b6f9156cbe4c45d660e514c7f5dd836abec147bb1ecddf41412fe211",
+     "what": "the scored postings, numbered as the model reads them (private)"
+    },
+    "data/rules.json": {
+     "sha256": "d4649dbea99bb8260409460d2e5ea4f385d29df52793751aaae19862e010d1be",
+     "what": "the data rules: title words, roles, cap, dates, clusters, seasonal, region, name check, practice draw"
+    },
+    "data/LABEL-RULES.md": {
+     "sha256": "b7eab2b41decc7fd99404ed0b08b3e0547dc79c8ad4e1e8872cd563d1205bd4a",
+     "what": "the labeling rules"
+    },
+    "site/data/questions.json": {
+     "sha256": "d096fea5153a657c7ada8e627196e98274fad506d0815e73c1ebd2f86d3c0f4f",
+     "what": "the questions and thresholds"
+    },
+    "site/data/key.json": {
+     "sha256": "fb2f53772028fdb082585452340046917c265179a4c72f806cb4d4ef9e6e8b81",
+     "what": "the answer key"
+    },
+    "site/data/second-labeling.json": {
+     "sha256": "3e9142d9199e9f048a02a477d37f29aafe41abb9c01f96f1ce8116c4596e784a",
+     "what": "the blind second labeling"
+    },
+    "site/data/disputes.json": {
+     "sha256": "a3bfb29b4d85cc16c8b9067e01d6a4a914d41c32fa37b81f8c19732de78df32d",
+     "what": "how each disagreement was settled"
+    },
+    "site/engine.js": {
+     "sha256": "2169464749ad48e04b75450118e41b0fa9fe3d6d4bfa37d4ce7babb12d3797e8",
+     "what": "the decision code"
+    },
+    "score.mjs": {
+     "sha256": "95941769ee7053119c90e2fe5de538fbfcb943d1625a39227239997fbecf693d",
+     "what": "the scorer"
+    },
+    "baseline.mjs": {
+     "sha256": "f3b425194eef42753288cb91f7516076804585c71cf9117c4852bfc7ce70663b",
+     "what": "the title rule, ported"
+    },
+    "site/data/baseline-answers.json": {
+     "sha256": "ef536d01fe2454c4afd53d8001d92fdf65a040e6c88ddcfebb2e16340ab2f604",
+     "what": "the title rule's saved answers"
+    },
+    "generate.py": {
+     "sha256": "ad100b73d0b7f220905f5553edb3f3c0a20d427625f4a1d66cd6425ee6231270",
+     "what": "the code that applies the data rules and numbers the lines"
+    },
+    "read_postings.py": {
+     "sha256": "05462878e8ee25410db3cef82fd1d76944d6b1236daca6989333fe4cad3c11f6",
+     "what": "the reading script and the pinned model name"
+    }
+   },
+   "previous": null
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-21T22:29:06",
+   "files": {
+    "site/engine.js": {
+     "sha256": "23b40f254339ca0a2bcbf32cb681c532f63b5f42d44906e0e2f7b4fc436abea9",
+     "before": "2169464749ad48e04b75450118e41b0fa9fe3d6d4bfa37d4ce7babb12d3797e8"
+    }
+   },
+   "reason": "Wording only: the brief's count line and one reason now read in the singular when a count is 1 ('1 delivery-type role in 1 place'). No decision code changed.",
+   "moved": "No count moved: every group, reason code and score is the same (scores.json compared before and after).",
+   "previous": "18e7a1624775069a542164c7239c7a4c5b29eb8e5b3d7b2c48a229ebf12be7b8"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-21T22:32:16",
+   "files": {
+    "score.mjs": {
+     "sha256": "cc01c567ca15f7c3981e0c44c3acfca3b0e547aeeda841ff557bb630828ec8cd",
+     "before": "95941769ee7053119c90e2fe5de538fbfcb943d1625a39227239997fbecf693d"
+    }
+   },
+   "reason": "Wording only: the yardstick is called 'the title rule' on the page instead of a planning name.",
+   "moved": "No count moved: only the text of one fold changed (scores.json compared before and after).",
+   "previous": "30827122bd581a973de8286bd9c551666d2eb8b1109070943653d18a2583b11b"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-21T22:32:16",
+   "files": {
+    "generate.py": {
+     "sha256": "1fca29a9c9d58ffabf23ba7fd34f5d04f89ddba1307d2651018779528ab737ae",
+     "before": "ad100b73d0b7f220905f5553edb3f3c0a20d427625f4a1d66cd6425ee6231270"
+    }
+   },
+   "reason": "Two local folder names moved out of the code into a private file, so the published code names no private folder. The practice draw comes out byte for byte the same.",
+   "moved": "No count moved: the practice set was drawn again and is identical; the scored data was not regenerated.",
+   "previous": "2529514e95f6ba6c74cc456c532be936037c4e110496a89994e5723ad0366af5"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-21T22:32:16",
+   "files": {
+    "read_postings.py": {
+     "sha256": "3cc87c63ea242cefd3c031c830d3715e83665bd22a54170936f3ea03f520fd97",
+     "before": "05462878e8ee25410db3cef82fd1d76944d6b1236daca6989333fe4cad3c11f6"
+    }
+   },
+   "reason": "Two local folder names moved out of the code into a private file. Without that file the script now refuses to make any paid call, because it cannot check the shared spend limit.",
+   "moved": "No count moved: no model call was made; the spend check reads the same totals as before.",
+   "previous": "ffafec02c1e446815e1ea344b99cd8961a2931f06e0c39e4888390f03732cc14"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-21T23:08:53",
+   "files": {
+    "site/engine.js": {
+     "sha256": "d5e290ae086b83ccb9593600170749ab8e77a13bae94f74490a52d348f1118eb",
+     "before": "23b40f254339ca0a2bcbf32cb681c532f63b5f42d44906e0e2f7b4fc436abea9"
+    }
+   },
+   "reason": "Wording and the brief only, after a review: a Brief ready reason gives the role's first posting date, not its newest copy's; the older-copies, open-a-while and nothing-new reasons say which posting the age is about; the unsure reason names the question the model was unsure on; the count line leaves out postings set apart and says when there are two boards; roles past the first three older than 90 days are counted; the notes for a first message stand on the new posting itself, and field-service companies get a question about service calls. The decision rule itself did not change.",
+   "moved": "No group moved (6 / 3 / 7 before and after). Reason text changed on HelloFresh (23 days, not 8), Blink Health, Insomnia Cookies, Thuma, Misfits Market and CookUnity.",
+   "previous": "9eeba985731ffed9b2c62bf3666505e6e471bcfd7eb3624144ee46e7ee291680"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-21T23:08:53",
+   "files": {
+    "score.mjs": {
+     "sha256": "e0dc59c8698f4e4caae4e7dce305d8146e56734ccc6f175dcdc2496d56750763",
+     "before": "cc01c567ca15f7c3981e0c44c3acfca3b0e547aeeda841ff557bb630828ec8cd"
+    }
+   },
+   "reason": "The scorer now does what the plan for the scoring said and the first scorer did not: a posting the written rules did not settle is left out of a row when the second labeler's answer would give that row a different answer. It also lists all 6 labeler disagreements, says 5 of 6 were not settled by the rules (the note had said all were), counts the line row as fair / unfair / no line, and fixes fold wording (AI helpers; unsure answers; the decision rule in order; the boards were also read while the list was made).",
+   "moved": "First row now on 58 of 60: model 56 same / 0 missed / 0 false alarms / 2 unsure (was 57/0/0/3 on 60); title rule 54/1/2/1 (was 56/1/2/1); always the common answer 53 same / 5 false alarms (was 55 / 5). Line row: 53 fair / 0 unfair / 1 no line picked (was 55 fair / 1 no line). No group moved.",
+   "previous": "92e55105e48d5da8311a5fc5121adbfb07d4d2938b39b64b4a36a97233e4ef85"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-21T23:08:53",
+   "files": {
+    "baseline.mjs": {
+     "sha256": "7c2da6a819226c750c6cf89aa4727544a08d2465f888906bd5896ffad0ffd247",
+     "before": "f3b425194eef42753288cb91f7516076804585c71cf9117c4852bfc7ce70663b"
+    }
+   },
+   "reason": "The internal planning name for the title rule is replaced by 'the title rule' in its comment, its saved label and its printed line.",
+   "moved": "No answer and no count moved.",
+   "previous": "fc85441ba772531a9628345262be48d091a4df47e8ecf788a112880472318062"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-21T23:08:53",
+   "files": {
+    "site/data/baseline-answers.json": {
+     "sha256": "250cd417e8d2bbb49b0b684cc246f1c1e5ed85c0692e62a22ee7ccfc17530ab2",
+     "before": "ef536d01fe2454c4afd53d8001d92fdf65a040e6c88ddcfebb2e16340ab2f604"
+    }
+   },
+   "reason": "Its label now reads 'the title rule' instead of a planning name.",
+   "moved": "No answer changed: only the label field differs.",
+   "previous": "0eca81047dd1267761045c57e2c03dc4b27ded8ed055b1beff0b3bc154209361"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-21T23:39:47",
+   "files": {
+    "site/engine.js": {
+     "sha256": "786d90cf1e3b6a8be3547b55e745de728894524bd0731715f81941353f6eebae",
+     "before": "d5e290ae086b83ccb9593600170749ab8e77a13bae94f74490a52d348f1118eb"
+    }
+   },
+   "reason": "After five more reviews: leadership hires come first among a company's new roles and among Brief ready companies; the question for a first message is tied to the hire and its kind of work; a leadership hire is reached through the person the role reports to; old-role lines leave out jobs outside the United States and jobs read as other work; the size line gives the board's open postings; a set-apart step says how many postings were left out. The decision rule did not change.",
+   "moved": "No group moved (6 / 3 / 7). The first Brief ready company is now Odeko (a general manager of delivery operations), not HelloFresh.",
+   "previous": "c9e71027b60ad85c15f9618b19f6368bf728609acc74be5ab76c7b021f53f622"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-21T23:39:47",
+   "files": {
+    "score.mjs": {
+     "sha256": "8eda4b624b0fde9004c12bd25bd0e6a2efe01abacac87694b9f53b2844ecdb55",
+     "before": "e0dc59c8698f4e4caae4e7dce305d8146e56734ccc6f175dcdc2496d56750763"
+    }
+   },
+   "reason": "Notes made plainer and more complete after five more reviews: questions 1 and 2 were written with these boards' titles in view; both sat at the practice bar; the rule for leaving out unsettled postings was added after the run, with the counts on all 60 beside it; what the starting line threshold would have dropped; the owner check covered the 16 companies shown; the decision rule fold matches the code.",
+   "moved": "No number moved.",
+   "previous": "4a2ed90ee8ff1a071182e573c2da85d07d1bd6181bdf5c4d479a64e6cb500bde"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-21T23:39:48",
+   "files": {
+    "site/data/questions.json": {
+     "sha256": "cdbe359a2a0e3b15ce6a7d9dda0df8292bfb644753eaf1cf53a13dd699699054",
+     "before": "d096fea5153a657c7ada8e627196e98274fad506d0815e73c1ebd2f86d3c0f4f"
+    }
+   },
+   "reason": "One change note says 'a separate AI review' instead of a phrase a reader could take for a person.",
+   "moved": "No question, option or threshold changed.",
+   "previous": "2940141665796f89220d4c77cba5f629069352fba5ed609090163f86cb81451a"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-21T23:39:48",
+   "files": {
+    "site/data/key.json": {
+     "sha256": "54721c67e7a6503d24939e13c6dd47442a88de3b320e715fe415c7622b54ee19",
+     "before": "fb2f53772028fdb082585452340046917c265179a4c72f806cb4d4ef9e6e8b81"
+    }
+   },
+   "reason": "Its description says the key was written by AI helper sessions and that no person labeled.",
+   "moved": "No answer changed.",
+   "previous": "c8c13e7f7526d338f1486987f4ba6d2d60638b3824e19e4b745cbbe1ee8e25fe"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-21T23:39:48",
+   "files": {
+    "site/data/disputes.json": {
+     "sha256": "4f09143ef71d79e0e1152de36da52e42ed26c53eab09700b30635479ba4b70bf",
+     "before": "a3bfb29b4d85cc16c8b9067e01d6a4a914d41c32fa37b81f8c19732de78df32d"
+    }
+   },
+   "reason": "Its description says plainly that the rules settled the clear cases and the rest were logged as rule unclear; two log labels that read as self-contradicting now say 'rule unclear (the key's reading is the closer fit)'.",
+   "moved": "No answer changed and no count moved: the scorer still reads 5 rule-unclear cases.",
+   "previous": "ea729ac1dce4c480dcaba32c14675680d7b7cf33db7ca3f431c13a98c9fcc885"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-21T23:39:48",
+   "files": {
+    "read_postings.py": {
+     "sha256": "1645efc6023eab7241206d48b5d1723b96f6adeba4cfca6106fd97d1ba082d16",
+     "before": "3cc87c63ea242cefd3c031c830d3715e83665bd22a54170936f3ea03f520fd97"
+    }
+   },
+   "reason": "The names of two private review files moved out of the published code into the private paths file; one comment no longer refers to other spend logs.",
+   "moved": "No number moved; no model call was made.",
+   "previous": "39c506f05b00486d8c2a398d7283f904a290d97278604117b7e7cabd66a95453"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-21T23:39:48",
+   "files": {
+    "baseline.mjs": {
+     "sha256": "62cd3e6008f6b98fc14b8c9ab3a91068f6078d56533b87411095e17b6e4b339c",
+     "before": "7c2da6a819226c750c6cf89aa4727544a08d2465f888906bd5896ffad0ffd247"
+    }
+   },
+   "reason": "Two comments no longer name a private planning file or a planning role.",
+   "moved": "No answer moved.",
+   "previous": "4db60ef0acd12525b9c18504fb32e7553c8cd730d99f3cfad7093745cc932ef5"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T00:11:08",
+   "files": {
+    "score.mjs": {
+     "sha256": "f066aaf4d03b955ec99048c7996624ab6a45617fd3703926af9f625fcde8c7df",
+     "before": "8eda4b624b0fde9004c12bd25bd0e6a2efe01abacac87694b9f53b2844ecdb55"
+    }
+   },
+   "reason": "Plain words in the test section after the readability review: 'match' instead of 'same', 'good proof' and 'not proof' for the quote score, 'the second AI' instead of 'labeler', a shorter account of the questions, the sorting order as a list, and the repeated 'kept honest' notes removed (their two unique facts moved to the caption and the changes list).",
+   "moved": "No number moved.",
+   "previous": "f9c7a6e8b754db259398ffb57430bd6106acb703be67997bd53e68487029523a"
+  },
+  {
+   "kind": "lock",
+   "version": "2",
+   "date": "2026-11-22T00:50:41",
+   "private_commit": "b4e15bf3ffc822fe958a286968b28752b27565ad",
+   "reason": "Version 2 of the build, decided on 11/22/2026 after version 1's reviews: wider job titles (logistics, transportation, routing, route, field technician), leadership titles new for 60 days and read first, delivery through carriers the employer manages counts (labeling rules version 3, questions stb-v6), an unsure answer goes to a person only when the job could still qualify, the title rule extended to the new words. Written after version 1's results were seen; 53 of the 78 test postings were scored in version 1.",
+   "files": {
+    "cache/role-texts.json": {
+     "sha256": "a5582eb1e50f08cb550f34d937992beae20d8e83949074ad5191925a0dfae6a7",
+     "what": "the scored postings, numbered as the model reads them (private)"
+    },
+    "data/rules.json": {
+     "sha256": "23cc6f5b7bbbe1dea931c104dad1762d412298ad09c6acc1e20f35d02f10c496",
+     "what": "the data rules: title words, roles, cap, dates, clusters, seasonal, region, name check, practice draw"
+    },
+    "data/LABEL-RULES.md": {
+     "sha256": "42d2705906b52c9558aa2b678962164606a0575734b7b3dc06c62b197190623d",
+     "what": "the labeling rules"
+    },
+    "site/data/questions.json": {
+     "sha256": "3c93526cc8e4e27a7a2e463c1874ef16757dba97ffed8d5cc45b389efb4ba195",
+     "what": "the questions and thresholds"
+    },
+    "site/data/key.json": {
+     "sha256": "6cacc2238a7054adde6f3d88895b57567bde6c4c7a4b401fe7f4f6a3c7017b2b",
+     "what": "the answer key"
+    },
+    "site/data/second-labeling.json": {
+     "sha256": "ed8d65839d48f37acb9038b90526bd68cbaed476c0ac235cd83e0eac6e1277a8",
+     "what": "the blind second labeling"
+    },
+    "site/data/disputes.json": {
+     "sha256": "1013cd6702bae04e62e243dc5bb041443c23e157c9f5149be1d5b285d4a29775",
+     "what": "how each disagreement was settled"
+    },
+    "site/engine.js": {
+     "sha256": "4725f26bb610d3abedabf99ee77b34dc6420fda88f85e317547f056a707194b2",
+     "what": "the decision code"
+    },
+    "score.mjs": {
+     "sha256": "f066aaf4d03b955ec99048c7996624ab6a45617fd3703926af9f625fcde8c7df",
+     "what": "the scorer"
+    },
+    "baseline.mjs": {
+     "sha256": "865d03195bd6f37d0bfdacd860b18778ec5c630f967c2b6807543bac7135d8ba",
+     "what": "the title rule, ported"
+    },
+    "site/data/baseline-answers.json": {
+     "sha256": "e8bc93bd44063ddcaf311cfb5943c7db2e4ccd90aa6c400315a09b45195cac87",
+     "what": "the title rule's saved answers"
+    },
+    "generate.py": {
+     "sha256": "2e52fb42612c7b34c4d9dfae6b753995059869ce25a25f8011b4c8fd3eeeeed4",
+     "what": "the code that applies the data rules and numbers the lines"
+    },
+    "read_postings.py": {
+     "sha256": "01f8d036eb980687a96b96df7f4d3cd815f6f1e0d92ff672f3509a53f8b10a88",
+     "what": "the reading script and the pinned model name"
+    }
+   },
+   "previous": "c41fa1e18efb2a29a8dc12be38127fddcf99f045afb5fdf83970eaa9256ff04f"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T00:52:57",
+   "files": {
+    "site/engine.js": {
+     "sha256": "2e707d8694d678dd7d3c68a70fdcd79533746a6fd44b38d3ab1eb4482d5558bd",
+     "before": "4725f26bb610d3abedabf99ee77b34dc6420fda88f85e317547f056a707194b2"
+    }
+   },
+   "reason": "After the version 2 run: a new job the AI read, with sure answers, as delivery work whose place cannot be read (for example only 'Remote') now goes to Needs a person (PLACE UNCLEAR) instead of Skipped as outside the US; an unsure answer on such a job also goes to a person. A version 1 reviewer had flagged that an unreadable place was reported as outside the US; it was listed as a known limit and became real in version 2. Wording only otherwise: a Brief ready reason says whether the job was posted again or is a leadership role inside its 60 days, and '1 day' is singular.",
+   "moved": "One company moved, with the model and with the answer key alike: Vital Farms, from Skipped to Needs a person (its new Director, Logistics says only 'Remote'). Groups with the model: 8 / 3 / 10 became 8 / 4 / 9; with the key, 8 / 2 / 11 became 8 / 3 / 10. No score moved.",
+   "previous": "852848331ac756493a8d8c49f915a7890d3a208e6ae884d3464d9aa70c27bfc2"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T00:52:57",
+   "files": {
+    "score.mjs": {
+     "sha256": "6be2a834dd9881d40bacc2ba858ca7d4500235ad86d8658b99f3e3a1794866b3",
+     "before": "f066aaf4d03b955ec99048c7996624ab6a45617fd3703926af9f625fcde8c7df"
+    }
+   },
+   "reason": "The sorting list on the page names the new PLACE UNCLEAR step.",
+   "moved": "No number moved.",
+   "previous": "be9961e092cefa6a08c7a46402db9171ba8b9cabe8c7c3aea586b93ab6057422"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T00:55:08",
+   "files": {
+    "score.mjs": {
+     "sha256": "529e8c22e366bfedf2d7a2fe7805320e20febab7bc1c77ee26051497ea69c834",
+     "before": "6be2a834dd9881d40bacc2ba858ca7d4500235ad86d8658b99f3e3a1794866b3"
+    }
+   },
+   "reason": "Text on the page brought up to version 2: question 1 as asked now, when questions 1 and 2 were reworded, version 2's practice result, the 60-day window for leadership titles, and the owner check covering all 21 companies shown.",
+   "moved": "No number moved.",
+   "previous": "e73f5706096d323d88bc5759a5dce071f1677abff8bfb661a39056b459a13764"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T01:21:57",
+   "files": {
+    "generate.py": {
+     "sha256": "7bffaa92b6be7891abf176439959bc19be05569b7a3bdd650e16aec19e7b1534",
+     "before": "2e52fb42612c7b34c4d9dfae6b753995059869ce25a25f8011b4c8fd3eeeeed4"
+    }
+   },
+   "reason": "After the version 2 reviews: the place check reads a US state after a comma or a full state name first (so 'Dublin, OH' and 'New Mexico' are US) and knows more countries (Malaysia, the Philippines and others); a board can carry a display name (the 1-800-GOT-JUNK board is a franchise group's); plain code finds the lines that name tools or systems and the line naming who the job reports to, and copies them into the quotes, never a line with a keep-out name. A bare 'US' is not read and the read order is unchanged, so the 78 postings read are byte for byte the same.",
+   "moved": "No group or score moved. Two jobs abroad (Castlery, and one HelloFresh coordinator) now read as outside the US instead of place not readable.",
+   "previous": "93093929e83ff6dd1e1ab38cf2946be0dc9416ccd76e253d4a2d315c3ceaa307"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T01:21:57",
+   "files": {
+    "data/rules.json": {
+     "sha256": "271d40cf1a3f6fb8a15b03c7a751a611463d26be5f9a3244b76d5b84ea9f5463",
+     "before": "23cc6f5b7bbbe1dea931c104dad1762d412298ad09c6acc1e20f35d02f10c496"
+    }
+   },
+   "reason": "The word patterns for tools and for reporting lines are added, with a note on how they are used.",
+   "moved": "No group or score moved.",
+   "previous": "11fecc9f6256ad30cf34428bc471e09d733d9abe0696f95160391b805fa2dbaf"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T01:21:57",
+   "files": {
+    "site/engine.js": {
+     "sha256": "6d9d2cb5c26c33a1ffbb6ed0b4379014988db84c8f227421e2a07c7b74b60c0d",
+     "before": "2e707d8694d678dd7d3c68a70fdcd79533746a6fd44b38d3ab1eb4482d5558bd"
+    }
+   },
+   "reason": "After the version 2 reviews: the check numbers match the sorting list (place unclear 4, unsure 5, skipped 6, no rule fits 7); among leadership hires a senior title not posted many times comes first, then the hire that stands out most (fewest other new delivery jobs at the company); driving ranks after dispatch and fleet; the brief quotes the tools a posting names; the notes use the posting's reporting line, ask about the named tools, show the drivers note only on driver jobs, and also appear on Needs a person companies as 'if a person decides it is fine'; the count line says 30 days, or 60 for a leadership role.",
+   "moved": "No group or score moved. The first Brief ready company is now Thuma (a Director of Home Delivery), not Carvana.",
+   "previous": "f3305e239ab0428cbd4eeb2bbde0b2d925ff309fd98ca2f42cacf83ac0c1fe8f"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T01:21:57",
+   "files": {
+    "score.mjs": {
+     "sha256": "d9b8c2c0ae2e9bc506afc5fd55a3aa89fe70d871ef563c7fb07530f0d7f4d1e9",
+     "before": "529e8c22e366bfedf2d7a2fe7805320e20febab7bc1c77ee26051497ea69c834"
+    }
+   },
+   "reason": "The page shows question 1 exactly as asked, the version 2 unsure rule, the full sorting list (with the 'no new job qualifies' step and the note that 'no rule fits' cannot be reached), three unconfirmed owners, how the title rule treats the new words, and the version 2 scores split between the postings also in version 1 and the new ones.",
+   "moved": "No number moved.",
+   "previous": "6450688096d29703775a7989733787b0318561c9d11020dd96725f98d87241f7"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T01:21:58",
+   "files": {
+    "site/data/key.json": {
+     "sha256": "bed4b088946c554369d467a1674a4026b7a7e4611fef96ea7059d32134bd2fad",
+     "before": "6cacc2238a7054adde6f3d88895b57567bde6c4c7a4b401fe7f4f6a3c7017b2b"
+    }
+   },
+   "reason": "Its description says the key was written before version 2's run, that the model had read 53 of these postings in version 1, and that no key writer saw a model answer.",
+   "moved": "No answer changed.",
+   "previous": "de537fb5a3f5588f1594901ab3dc60e5d8b82dd78dfd24d88dd079b08a88d923"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T01:21:58",
+   "files": {
+    "site/data/second-labeling.json": {
+     "sha256": "be5f60445c95d099162533964be6bc823bf9f888b314537cc7826b9ddae92ff4",
+     "before": "ed8d65839d48f37acb9038b90526bd68cbaed476c0ac235cd83e0eac6e1277a8"
+    }
+   },
+   "reason": "Its description no longer names the second labeling tool; it says a second AI from a different company.",
+   "moved": "No answer changed.",
+   "previous": "4df367192306b7e09ba3251314d2175def645af5b013d815eb0dd488fb2e10e2"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T01:58:37",
+   "files": {
+    "site/engine.js": {
+     "sha256": "a0261d4f9b25862fd75a47871975f52fe5ed7d9c23475469b23ae75d463bac17",
+     "before": "6d9d2cb5c26c33a1ffbb6ed0b4379014988db84c8f227421e2a07c7b74b60c0d"
+    }
+   },
+   "reason": "After the final checks: the question names only tools from the posting the notes stand on, never generic words; old-role lines leave out recruiting jobs; a reporting line into procurement or finance gets a note that delivery decisions may sit with operations.",
+   "moved": "No group or score moved.",
+   "previous": "99222e92e1a3f66bafbfdf2a7694ed33e9d7f79128ff69142f93b35f38658951"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T01:58:37",
+   "files": {
+    "score.mjs": {
+     "sha256": "c3edd5e3a0ba887eab82f1383dabb93af7fda86e3023f13a07b81a9134189208",
+     "before": "d9b8c2c0ae2e9bc506afc5fd55a3aa89fe70d871ef563c7fb07530f0d7f4d1e9"
+    }
+   },
+   "reason": "The clustered-dates wording says 'no more than 14 days apart', which is what the rule counts.",
+   "moved": "No number moved.",
+   "previous": "b58800cdf5ea09b4d968533dc75e021ef9a484982b27ad73da1a0bc321b5c01d"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T01:58:37",
+   "files": {
+    "read_postings.py": {
+     "sha256": "5769c13ad7f0d11184394e0c746c9cc92dffaad65ae1c929047a122ca99eae86",
+     "before": "01f8d036eb980687a96b96df7f4d3cd815f6f1e0d92ff672f3509a53f8b10a88"
+    }
+   },
+   "reason": "Its help text no longer describes a switch for saved answers that does not exist.",
+   "moved": "No number moved; no model call was made.",
+   "previous": "124453a7cd5c3f95b3445b71f1ad7579cb075c0e13c2ef3f91d3c776eb92a49e"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T13:24:21",
+   "files": {
+    "site/engine.js": {
+     "sha256": "4be75e74d64dc1581876d582b946d28e0b3a0db221096ddb3e73633f53de3f12",
+     "before": "a0261d4f9b25862fd75a47871975f52fe5ed7d9c23475469b23ae75d463bac17"
+    }
+   },
+   "reason": "After five final reviews: a quoted line from a posting other than the job the row is about names that posting (Daniels Health, Castlery); the proof line on a Needs a person company comes from the job the notes would stand on; generic words are never listed as tools in the brief; delivery or dispatch software (for example Burq, Service Titan) is listed first and gets its own question and do-not-assume line; the notes say where the hire fits Nash, in my words from Nash's public product pages, by the job's kind or carriers in the quoted lines; the procurement or finance note reads only the reporting clause and also catches CFO; a remote place is kept out of the question; a driver question says delivery or pickup; the Brief ready reason says the extra roles qualify the same way; the proof line says the AI picked it.",
+   "moved": "No group or score moved.",
+   "previous": "27c904cff339b430f998592bf375f1c2a96cbcfbf4174204fa48d499fe8597ed"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T13:24:21",
+   "files": {
+    "score.mjs": {
+     "sha256": "a6f4993a3af190a4b741f709f56e05224719bbf1c17eec224f809b9562c6731e",
+     "before": "c3edd5e3a0ba887eab82f1383dabb93af7fda86e3023f13a07b81a9134189208"
+    }
+   },
+   "reason": "After five final reviews: the scores file carries the headline numbers the top of the page states and the version 1 / version 2 split as rows for a small table; the not-built line becomes what would be measured with real reps; the boards note says which job-board systems can be seen and that owners were looked up (five not fully confirmed; the franchise group behind one board not checked); the sorting list's first check and the one-posting-per-job rule are worded as the code counts them; two unused fields removed; --standin refuses to overwrite the model's answers.",
+   "moved": "No score moved: every row, disagreement and dispute is unchanged.",
+   "previous": "bd8f4df667cba0e624e7157136793aa80a0d34be72746b9c25e57083c72fac31"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T13:24:21",
+   "files": {
+    "baseline.mjs": {
+     "sha256": "c489bcabc67f0a2f24bb30cae7d01168b33df13408125f2b366af22eec27679f",
+     "before": "865d03195bd6f37d0bfdacd860b18778ec5c630f967c2b6807543bac7135d8ba"
+    }
+   },
+   "reason": "The script runs as a script from any folder (its run check now compares file paths, which failed silently in a folder whose name has a space); a comment names where the rule came from.",
+   "moved": "No answer changed: the saved answers are byte for byte the same.",
+   "previous": "412ccdc9380998ecb7c889b0cc00c549ac5354cdfd20153363b047f2bdf7c923"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T13:24:21",
+   "files": {
+    "read_postings.py": {
+     "sha256": "2e8fb85f3cb8ade133672abbd5c60e7ebb28307297acb8992039ba836121f824",
+     "before": "5769c13ad7f0d11184394e0c746c9cc92dffaad65ae1c929047a122ca99eae86"
+    }
+   },
+   "reason": "Code tidying: the account-wide spend limit's value moves to the file kept outside the repo; comments describe it generically.",
+   "moved": "No call made; no score moved.",
+   "previous": "2e5faf8e96e472422aca2a866bcc2adfc2bee8cba6b1d45dc1c4ee5611c6e1b7"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T13:24:21",
+   "files": {
+    "generate.py": {
+     "sha256": "c2c2b9001df538d84307d72cd3efd33fbf429eee1c9dbdcac3ee634f4f0d0a6e",
+     "before": "7bffaa92b6be7891abf176439959bc19be05569b7a3bdd650e16aec19e7b1534"
+    }
+   },
+   "reason": "An unused field, market_page (a link to a Nash industry page), is no longer written into the company data; the data was generated again and is otherwise byte for byte the same.",
+   "moved": "No number changed.",
+   "previous": "396a1a6d0205c0062d4291640adbbce44cda6aa90422485761d852d450954af6"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T14:03:25",
+   "files": {
+    "site/engine.js": {
+     "sha256": "8bd1327c5c4c423ae6bd4078333032cee4b6905353ce73f581be657241d87b28",
+     "before": "4be75e74d64dc1581876d582b946d28e0b3a0db221096ddb3e73633f53de3f12"
+    }
+   },
+   "reason": "After the re-checks: the brief takes the ready list's first role only for a Brief ready company; on a Needs a person company the row's job is the candidate, so Daniels Health's proof line now comes from its Transportation Manager posting instead of another posting with no label. Where-it-fits wording for drivers, dispatch and technicians made closer to the job.",
+   "moved": "No group or score moved.",
+   "previous": "67094f387337e02dea9b7c355497b8cd458734c6cf9d283f32bf0b8fe43b3976"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T14:03:25",
+   "files": {
+    "score.mjs": {
+     "sha256": "9baddc12ca32bb6a09c2032e9d91e7cab245aee258f12e72c85ffc414d97671f",
+     "before": "a6f4993a3af190a4b741f709f56e05224719bbf1c17eec224f809b9562c6731e"
+    }
+   },
+   "reason": "After the re-checks: the headline numbers also carry the title rule's counts and the number of companies; the boards note's last sentence no longer repeats itself.",
+   "moved": "No score moved.",
+   "previous": "6a6d2bcd803d63f5aef369a206055cb4f336d539a1f524baf11c15596e349ddf"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T14:03:25",
+   "files": {
+    "generate.py": {
+     "sha256": "1ca06fa560af77dd460ef55ba2d92bb071b7893577352efcf117dd27c332ba0b",
+     "before": "c2c2b9001df538d84307d72cd3efd33fbf429eee1c9dbdcac3ee634f4f0d0a6e"
+    }
+   },
+   "reason": "After the re-checks: up to three tool lines per posting, each naming a tool the lines before it did not (it was two lines, even when both repeated one word). Quotes generated again: only Sila Services' posting changed, now quoting the line that names ServiceTitan and Intacct instead of a second telematics line.",
+   "moved": "No group or score moved.",
+   "previous": "65a535694c6ff40494bcb5238ce046cbe6bc5e570b51e15a3f6caa98ccf077a6"
+  }
+ ],
+ "reworded": "11/22/2026: the descriptions in this log were reworded once, to take out internal names and build wording; every fingerprint, date and the order of entries are unchanged, and the chain was computed again over the reworded entries."
+}

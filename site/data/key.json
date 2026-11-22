@@ -1,0 +1,1303 @@
+{
+ "what_this_is": "The answer key for the 78 scored postings of version 2. Written by two AI helper sessions (no person labeled) from LABEL-RULES.md version 3, each in a clean folder holding only the rules and its half of the postings, before version 2's test run. The model had read 53 of these postings in version 1's run; no key writer saw a model answer.",
+ "rules": "LABEL-RULES.md version 3",
+ "labels": [
+  {
+   "posting_id": "0c5f8298-2902-4159-a489-362f0d02c3d3",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    9,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    29,
+    36,
+    39,
+    43,
+    45,
+    48,
+    67
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "1f27f8be-e165-486f-9c32-ab95c803d762",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    27,
+    33,
+    36,
+    40,
+    42,
+    45,
+    64
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "caf30146-e3a5-4188-94ce-df9c32df52cd",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    9,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    29,
+    36,
+    39,
+    43,
+    45,
+    48,
+    67
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "290f5e77-a845-4420-8ba2-afc2a48ec0cb",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    27,
+    33,
+    36,
+    40,
+    42,
+    45,
+    64
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "d53b8e0c-c3eb-44c2-ab8b-fe371e3e6b88",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    9,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    29,
+    36,
+    39,
+    43,
+    45,
+    48,
+    67
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "008cc737-3987-4436-8850-2a378251122a",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    27,
+    33,
+    36,
+    40,
+    42,
+    45,
+    64
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "65da0e6a-74bf-4c60-8936-d29b7d8e7902",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    27,
+    33,
+    36,
+    40,
+    42,
+    45,
+    64
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "cce1dca3-6402-428f-b557-0832bc65d52f",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    3,
+    13,
+    23,
+    24,
+    26,
+    37
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "8406918",
+   "q1": "yes",
+   "q1_lines": [
+    27,
+    28,
+    30,
+    32,
+    35,
+    36
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "8407033",
+   "q1": "yes",
+   "q1_lines": [
+    14,
+    16,
+    27,
+    28
+   ],
+   "q2": "delivery_operations_management",
+   "hard": "The role reviews daily route schedules, but it mainly oversees transportation operations and teams that include CDL drivers, so it is management rather than dispatch_or_routing."
+  },
+  {
+   "posting_id": "8407262",
+   "q1": "yes",
+   "q1_lines": [
+    31,
+    32
+   ],
+   "q2": "delivery_operations_management",
+   "hard": "Only the requirement lines (managing CDL drivers, vehicle transporter or tractor-trailer experience) show a driver operation; the duties are generic site management at a logistics field operation. Yes was chosen because the hire is expected to manage CDL drivers."
+  },
+  {
+   "posting_id": "8360059",
+   "q1": "yes",
+   "q1_lines": [
+    13,
+    15,
+    26,
+    27
+   ],
+   "q2": "delivery_operations_management",
+   "hard": "The role reviews daily route schedules, but it mainly oversees transportation operations and teams that include CDL drivers, so it is management rather than dispatch_or_routing."
+  },
+  {
+   "posting_id": "8405740",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    33,
+    34,
+    36,
+    44
+   ],
+   "q2": "driving_or_courier",
+   "hard": "Mixes customer service with delivering vehicles by hauler; delivering is a main duty, so the boundary rule gives driving_or_courier."
+  },
+  {
+   "posting_id": "8405745",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    33,
+    34,
+    36,
+    46
+   ],
+   "q2": "driving_or_courier",
+   "hard": "Mixes customer service with delivering vehicles by hauler; delivering is a main duty, so the boundary rule gives driving_or_courier."
+  },
+  {
+   "posting_id": "8405748",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    36,
+    37,
+    39,
+    49
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "8405749",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    33,
+    34,
+    36,
+    44
+   ],
+   "q2": "driving_or_courier",
+   "hard": "Title says advocate, but the duties are mainly delivering vehicles to customers' doors by hauler, so the boundary rule gives driving_or_courier."
+  },
+  {
+   "posting_id": "4502512009",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    7,
+    8,
+    10,
+    11,
+    15
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "4502787009",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    15,
+    17,
+    20,
+    32
+   ],
+   "q2": "fleet_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "4504236009",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    6,
+    8,
+    12,
+    13,
+    19,
+    20,
+    22,
+    23,
+    25,
+    37,
+    38,
+    40,
+    43,
+    59,
+    62,
+    76
+   ],
+   "q2": "delivery_operations_management",
+   "hard": "Role includes fleet maintenance and safety, but its main work is running daily transport operations and leading drivers and dispatchers, so delivery_operations_management fits better than fleet_management."
+  },
+  {
+   "posting_id": "4504383009",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    4,
+    5,
+    9,
+    10,
+    11,
+    12,
+    13,
+    16,
+    26
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4502401009",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    4,
+    6,
+    8,
+    9,
+    10,
+    11,
+    14,
+    15
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4502437009",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4502449009",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    9,
+    10,
+    12,
+    13,
+    14
+   ],
+   "q2": "driving_or_courier",
+   "hard": "Job mixes warehouse tasks with driving, but the text makes route driving and deliveries a regular duty, so the rules favor driving_or_courier."
+  },
+  {
+   "posting_id": "4502558009",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "7804755003",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    27,
+    28,
+    30,
+    31,
+    32,
+    33,
+    35,
+    36
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "7796249003",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    13,
+    15,
+    33,
+    34,
+    36,
+    37,
+    38,
+    39,
+    41,
+    42,
+    44
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "7491068003",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    14,
+    15,
+    16,
+    18,
+    29,
+    37,
+    38,
+    41,
+    42
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "6642393003",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    13,
+    14,
+    29,
+    30,
+    32,
+    33,
+    34,
+    35,
+    37,
+    38
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "6234425004",
+   "q1": "yes",
+   "q1_lines": [
+    10,
+    11,
+    14,
+    16,
+    19,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    29,
+    30,
+    31,
+    32,
+    35,
+    36,
+    40,
+    44
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "6267870004",
+   "q1": "yes",
+   "q1_lines": [
+    10,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    25,
+    29
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "6265566004",
+   "q1": "yes",
+   "q1_lines": [
+    10,
+    18,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    30,
+    34
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "6263431004",
+   "q1": "yes",
+   "q1_lines": [
+    11,
+    15,
+    16,
+    17,
+    18,
+    19,
+    21,
+    23
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "6240678004",
+   "q1": "yes",
+   "q1_lines": [
+    13,
+    14,
+    15,
+    16,
+    23,
+    30
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "6232577004",
+   "q1": "yes",
+   "q1_lines": [
+    10,
+    18,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    30,
+    34
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "6232062004",
+   "q1": "yes",
+   "q1_lines": [
+    10,
+    15,
+    16,
+    17,
+    18,
+    25,
+    32
+   ],
+   "q2": "driving_or_courier",
+   "hard": "Flex warehouse/driver role; the text makes driving a delivery route a regular duty, with warehouse work when not driving, so the rules favor driving_or_courier."
+  },
+  {
+   "posting_id": "6225136004",
+   "q1": "yes",
+   "q1_lines": [
+    13,
+    14,
+    15,
+    16,
+    18,
+    22
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "b53d4034-e719-4fd3-b948-7c79bc04f682",
+   "q1": "yes",
+   "q1_lines": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    20,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    29,
+    30,
+    31,
+    32,
+    33,
+    48
+   ],
+   "q2": "fleet_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "b3c14833-55b6-4d72-8a62-5f7f1be2f64d",
+   "q1": "yes",
+   "q1_lines": [
+    4,
+    5,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    23,
+    38,
+    39
+   ],
+   "q2": "driving_or_courier",
+   "hard": "Mixes warehouse work with delivering parts to technicians and job sites; line 5 makes driving and deliveries a core part of the role, though line 17 says as needed, so the rules lean driving_or_courier over warehouse_or_store."
+  },
+  {
+   "posting_id": "edc1efc6-13e4-4d00-a8cd-e6dd9dfb858e",
+   "q1": "yes",
+   "q1_lines": [
+    4,
+    5,
+    9,
+    10,
+    11
+   ],
+   "q2": "driving_or_courier",
+   "hard": "Field work is implied by a plumbing field operations team doing pipe laying and emergency jobs at work sites, not stated as visits to customers. For question 2, hauling equipment by truck is the main duty, ahead of the labor, so driving_or_courier was chosen over other."
+  },
+  {
+   "posting_id": "38224d9d-63f3-4fa3-8e35-c2bbb2cce88b",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    8,
+    9,
+    10,
+    11,
+    12,
+    14,
+    15,
+    33
+   ],
+   "q2": "dispatch_or_routing",
+   "hard": ""
+  },
+  {
+   "posting_id": "cbe7fe43-69ce-4c3c-a831-070365e4b0a8",
+   "q1": "yes",
+   "q1_lines": [
+    6,
+    7,
+    11,
+    12,
+    13
+   ],
+   "q2": "driving_or_courier",
+   "hard": "This is a sewer site-work contractor whose field crews install pipe at client sites, which counts as field visits. The job is mainly driving dump trucks and hauling equipment, so driving_or_courier wins over field_technician."
+  },
+  {
+   "posting_id": "8b51a1a8-aac2-4828-a766-8ac3f08eaef0",
+   "q1": "yes",
+   "q1_lines": [
+    6,
+    10,
+    11,
+    13,
+    14,
+    15,
+    20
+   ],
+   "q2": "dispatch_or_routing",
+   "hard": "The role mixes customer service calls with dispatching technicians. Dispatch and routing duties dominate the list."
+  },
+  {
+   "posting_id": "7171aa4e-342c-4727-8cb8-1853f8785bd8",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    3,
+    13,
+    14,
+    15,
+    16,
+    17,
+    21,
+    22,
+    23,
+    51
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "0e00f385-df06-4f0f-8476-c91757490cc7",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    3,
+    11,
+    12,
+    13,
+    14,
+    15,
+    19,
+    20,
+    21,
+    49
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "7382b3d1-d37d-4953-9cee-d4b926c3e901",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    3,
+    11,
+    12,
+    13,
+    14,
+    15,
+    19,
+    20,
+    21
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "9be2a3cb-e686-4153-989c-2bcff95ca3fe",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    3,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    21,
+    22,
+    23,
+    24,
+    25
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4517488009",
+   "q1": "yes",
+   "q1_lines": [
+    27,
+    28
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4514870009",
+   "q1": "yes",
+   "q1_lines": [
+    25,
+    26
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4515413009",
+   "q1": "yes",
+   "q1_lines": [
+    5,
+    23,
+    24
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4515467009",
+   "q1": "yes",
+   "q1_lines": [
+    17
+   ],
+   "q2": "driving_or_courier",
+   "hard": "The duties list junk removal at homes and businesses plus sales. Driving shows only in the title and the licence requirement, so the junk-removal example under driving_or_courier decides it over other."
+  },
+  {
+   "posting_id": "4506555009",
+   "q1": "yes",
+   "q1_lines": [
+    27,
+    28
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4506698009",
+   "q1": "yes",
+   "q1_lines": [
+    4,
+    22
+   ],
+   "q2": "driving_or_courier",
+   "hard": "The text is thin. The yes rests on the employer calling itself a junk removal company and the job's truck-driving duty."
+  },
+  {
+   "posting_id": "4485442009",
+   "q1": "yes",
+   "q1_lines": [
+    27,
+    28
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4453213009",
+   "q1": "yes",
+   "q1_lines": [
+    9,
+    20,
+    21
+   ],
+   "q2": "delivery_operations_management",
+   "hard": "The job mixes hands-on junk removal and sales with route planning and leading driver crews. L009 says this position oversees logistics, route planning and the driver team, so management wins over driving_or_courier."
+  },
+  {
+   "posting_id": "8261153",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    4,
+    5,
+    11,
+    12,
+    14,
+    21,
+    23,
+    24
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "8381818",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    8,
+    11,
+    13,
+    16
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "8364894",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    10,
+    11,
+    14,
+    16,
+    18,
+    19
+   ],
+   "q2": "delivery_operations_management",
+   "hard": "The job is heavy on data, but its stated core is managing the final-mile 3PL delivery partners."
+  },
+  {
+   "posting_id": "8371654",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    4,
+    8,
+    9,
+    14
+   ],
+   "q2": "software_or_data",
+   "hard": "The employer's vehicle fleet is stated, and its delivery purpose is implied only by the word logistics. The intern mainly analyses fleet data and builds reports, so software_or_data wins over fleet_management."
+  },
+  {
+   "posting_id": "8222713",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    4,
+    5,
+    8,
+    9,
+    10,
+    11
+   ],
+   "q2": "dispatch_or_routing",
+   "hard": "The job oversees delivery partners (DSPs), which could make it delivery_operations_management, but the daily duties are mainly watching live deliveries and route coverage."
+  },
+  {
+   "posting_id": "8185708",
+   "q1": "not_said",
+   "q1_lines": [],
+   "q2": "other",
+   "hard": "The duties are order processing and fulfillment coordination with some data analysis. Nothing mentions delivering, and order execution outweighs analysis, so other rather than software_or_data."
+  },
+  {
+   "posting_id": "7741137",
+   "q1": "yes",
+   "q1_lines": [
+    14,
+    15,
+    16,
+    19,
+    22
+   ],
+   "q2": "software_or_data",
+   "hard": "The intern tracks delivery partners' performance, but most duties are analyses and reporting tools, so software_or_data wins over delivery_operations_management."
+  },
+  {
+   "posting_id": "7998340003",
+   "q1": "yes",
+   "q1_lines": [
+    5,
+    9,
+    12,
+    13,
+    21,
+    22,
+    23,
+    26,
+    27,
+    28,
+    29,
+    31,
+    32,
+    33,
+    34,
+    35
+   ],
+   "q2": "delivery_operations_management",
+   "hard": "The supervisor also does dispatch tasks, but mainly supervises the logistics team and coordinates last-mile carriers and 3PL partners."
+  },
+  {
+   "posting_id": "7785754003",
+   "q1": "yes",
+   "q1_lines": [
+    5,
+    9,
+    11,
+    12,
+    13,
+    15,
+    16,
+    17,
+    18,
+    23,
+    24,
+    25,
+    26,
+    27,
+    29,
+    30,
+    32,
+    33,
+    34,
+    38
+   ],
+   "q2": "dispatch_or_routing",
+   "hard": ""
+  },
+  {
+   "posting_id": "7628262003",
+   "q1": "yes",
+   "q1_lines": [
+    5,
+    9,
+    16,
+    17,
+    21,
+    22,
+    26,
+    29
+   ],
+   "q2": "driving_or_courier",
+   "hard": "The coordinator title and warehouse tasks point elsewhere, but the text makes regular local deliveries in company vehicles a core duty."
+  },
+  {
+   "posting_id": "7609220003",
+   "q1": "yes",
+   "q1_lines": [
+    5,
+    9,
+    13,
+    17,
+    19,
+    20,
+    21,
+    25
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "5015000008",
+   "q1": "not_said",
+   "q1_lines": [],
+   "q2": "warehouse_or_store",
+   "hard": ""
+  },
+  {
+   "posting_id": "5485608008",
+   "q1": "yes",
+   "q1_lines": [
+    8,
+    9,
+    11,
+    12
+   ],
+   "q2": "dispatch_or_routing",
+   "hard": ""
+  },
+  {
+   "posting_id": "9f2a200e-f02b-4fff-9548-d9ce4ac1a1aa",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    5,
+    6,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "8935278002",
+   "q1": "yes",
+   "q1_lines": [
+    20
+   ],
+   "q2": "other",
+   "hard": "The 'Delivery' in the title is about training, but L020 says the employer provides prescription home delivery. That rules out no, and the rules favor yes over not_said."
+  },
+  {
+   "posting_id": "6216611004",
+   "q1": "not_said",
+   "q1_lines": [],
+   "q2": "other",
+   "hard": "This is inbound receiving and inventory only, with nothing about delivery to customers. It is a fully remote role, so it is not physical warehouse work, which makes it other rather than warehouse_or_store."
+  },
+  {
+   "posting_id": "6163386004",
+   "q1": "yes",
+   "q1_lines": [
+    3,
+    5,
+    6,
+    7,
+    23
+   ],
+   "q2": "dispatch_or_routing",
+   "hard": "The coordinator tracks daily deliveries and shipment status with delivery partners and also does customer support. Watching deliveries during the day fits dispatch_or_routing better than managing partners."
+  },
+  {
+   "posting_id": "6150570004",
+   "q1": "no",
+   "q1_lines": [
+    1,
+    2,
+    5,
+    6,
+    10,
+    12,
+    13,
+    16,
+    19,
+    26
+   ],
+   "q2": "software_or_data",
+   "hard": ""
+  },
+  {
+   "posting_id": "6265307004",
+   "q1": "yes",
+   "q1_lines": [
+    6,
+    9,
+    11,
+    14,
+    15
+   ],
+   "q2": "software_or_data",
+   "hard": "The job includes project leadership and managing the parcel network, but analytics, models and tools dominate the duties."
+  },
+  {
+   "posting_id": "ab504f2c-d125-4a99-a6ad-2e8e940494c6",
+   "q1": "yes",
+   "q1_lines": [
+    3
+   ],
+   "q2": "other",
+   "hard": "'Care Delivery' is about patient care, but L003 says the employer's platform covers delivery of medication. That rules out no, and the rules favor yes over not_said."
+  },
+  {
+   "posting_id": "4753997005",
+   "q1": "yes",
+   "q1_lines": [
+    11,
+    13,
+    16,
+    19,
+    20,
+    23,
+    24,
+    25,
+    26,
+    28,
+    29,
+    30,
+    33,
+    40,
+    46
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "e37a68ff-d94f-4bb1-b265-f19ff06e5264",
+   "q1": "yes",
+   "q1_lines": [
+    8,
+    10,
+    18,
+    23
+   ],
+   "q2": "field_technician",
+   "hard": ""
+  },
+  {
+   "posting_id": "4713216006",
+   "q1": "yes",
+   "q1_lines": [
+    11,
+    21,
+    22,
+    24,
+    25,
+    26,
+    28,
+    33,
+    35,
+    37,
+    41,
+    42,
+    44
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "4712661006",
+   "q1": "yes",
+   "q1_lines": [
+    7
+   ],
+   "q2": "software_or_data",
+   "hard": "The only delivery evidence is the employer partnering with 3PL firms that fulfill drop-ship orders to its customers. Under the outside-delivery-partners rule that is yes rather than not_said."
+  }
+ ]
+}

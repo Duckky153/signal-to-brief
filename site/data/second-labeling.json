@@ -1,0 +1,1502 @@
+{
+ "labeler": "a second AI, from a different company than the key's, read-only, in a clean folder holding only the version 3 rules and the 78 postings",
+ "rules": "LABEL-RULES.md version 3",
+ "labels": [
+  {
+   "posting_id": "0c5f8298-2902-4159-a489-362f0d02c3d3",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    18,
+    33,
+    39,
+    43,
+    45
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "1f27f8be-e165-486f-9c32-ab95c803d762",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    14,
+    15,
+    17,
+    18,
+    31,
+    33,
+    40,
+    42
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "caf30146-e3a5-4188-94ce-df9c32df52cd",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    18,
+    33,
+    36,
+    39,
+    43,
+    45
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "290f5e77-a845-4420-8ba2-afc2a48ec0cb",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    14,
+    15,
+    17,
+    18,
+    31,
+    33,
+    40,
+    42
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "d53b8e0c-c3eb-44c2-ab8b-fe371e3e6b88",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    9,
+    14,
+    15,
+    16,
+    18,
+    33,
+    36,
+    39,
+    43,
+    45
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "008cc737-3987-4436-8850-2a378251122a",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    14,
+    15,
+    17,
+    18,
+    31,
+    33,
+    40,
+    42
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "65da0e6a-74bf-4c60-8936-d29b7d8e7902",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    14,
+    15,
+    17,
+    18,
+    31,
+    33,
+    40,
+    42
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "cce1dca3-6402-428f-b557-0832bc65d52f",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    3,
+    13,
+    22,
+    23,
+    24,
+    25,
+    26,
+    36,
+    37,
+    38,
+    39
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "8406918",
+   "q1": "yes",
+   "q1_lines": [
+    25,
+    26,
+    27,
+    28,
+    30,
+    31,
+    32,
+    35,
+    36,
+    38,
+    42
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "8407033",
+   "q1": "yes",
+   "q1_lines": [
+    11,
+    14,
+    16,
+    21,
+    23,
+    25,
+    27,
+    28,
+    31,
+    32
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "8407262",
+   "q1": "yes",
+   "q1_lines": [
+    11,
+    13,
+    15,
+    17,
+    18,
+    21,
+    31,
+    32
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "8360059",
+   "q1": "yes",
+   "q1_lines": [
+    10,
+    13,
+    15,
+    20,
+    22,
+    26,
+    27,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "8405740",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    33,
+    34,
+    36,
+    44,
+    49
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "8405745",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    33,
+    34,
+    36,
+    46,
+    51
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "8405748",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    36,
+    37,
+    39,
+    49,
+    54
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "8405749",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    33,
+    34,
+    36,
+    44,
+    49
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4502512009",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    10,
+    12,
+    13,
+    15,
+    16,
+    17,
+    18,
+    19,
+    23,
+    26,
+    27,
+    28,
+    29,
+    35,
+    38,
+    40,
+    43,
+    50,
+    51,
+    59,
+    61,
+    62,
+    63,
+    64,
+    69,
+    72,
+    76
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "4502787009",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    19,
+    20,
+    23,
+    24,
+    28,
+    29,
+    31,
+    32
+   ],
+   "q2": "fleet_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "4504236009",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    5,
+    8,
+    12,
+    13,
+    15,
+    19,
+    22,
+    25,
+    35,
+    38,
+    40,
+    43,
+    50,
+    51,
+    59,
+    61,
+    62,
+    63,
+    64,
+    69,
+    72,
+    76
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "4504383009",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    4,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    25,
+    26
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4502401009",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    4,
+    6,
+    8,
+    9,
+    10,
+    14,
+    15,
+    18,
+    20,
+    23,
+    27
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4502437009",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4502449009",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    18,
+    20,
+    21
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4502558009",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    18,
+    19,
+    21,
+    22
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "7804755003",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "7796249003",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    13,
+    14,
+    15,
+    33,
+    34,
+    36,
+    37,
+    38,
+    39,
+    41,
+    42,
+    44
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "7491068003",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    13,
+    14,
+    15,
+    16,
+    18,
+    37,
+    38,
+    41,
+    42
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "6642393003",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    13,
+    14,
+    27,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "6234425004",
+   "q1": "yes",
+   "q1_lines": [
+    10,
+    11,
+    14,
+    16,
+    19,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    32,
+    35,
+    40,
+    44
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "6267870004",
+   "q1": "yes",
+   "q1_lines": [
+    10,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    29
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "6265566004",
+   "q1": "yes",
+   "q1_lines": [
+    10,
+    11,
+    18,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    30,
+    34
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "6263431004",
+   "q1": "yes",
+   "q1_lines": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "6240678004",
+   "q1": "yes",
+   "q1_lines": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    30
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "6232577004",
+   "q1": "yes",
+   "q1_lines": [
+    18,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "6232062004",
+   "q1": "yes",
+   "q1_lines": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    32
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "6225136004",
+   "q1": "yes",
+   "q1_lines": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "b53d4034-e719-4fd3-b948-7c79bc04f682",
+   "q1": "yes",
+   "q1_lines": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    38,
+    39,
+    40,
+    41,
+    45
+   ],
+   "q2": "fleet_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "b3c14833-55b6-4d72-8a62-5f7f1be2f64d",
+   "q1": "yes",
+   "q1_lines": [
+    4,
+    5,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    38,
+    39
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "edc1efc6-13e4-4d00-a8cd-e6dd9dfb858e",
+   "q1": "yes",
+   "q1_lines": [
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    13,
+    14
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "38224d9d-63f3-4fa3-8e35-c2bbb2cce88b",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    8,
+    9,
+    10,
+    11,
+    12,
+    14,
+    15,
+    17,
+    19,
+    53
+   ],
+   "q2": "dispatch_or_routing",
+   "hard": ""
+  },
+  {
+   "posting_id": "cbe7fe43-69ce-4c3c-a831-070365e4b0a8",
+   "q1": "yes",
+   "q1_lines": [
+    6,
+    7,
+    8,
+    11,
+    12,
+    13,
+    15
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "8b51a1a8-aac2-4828-a766-8ac3f08eaef0",
+   "q1": "yes",
+   "q1_lines": [
+    6,
+    8,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    20
+   ],
+   "q2": "dispatch_or_routing",
+   "hard": ""
+  },
+  {
+   "posting_id": "7171aa4e-342c-4727-8cb8-1853f8785bd8",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    3,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    39,
+    40,
+    51
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "0e00f385-df06-4f0f-8476-c91757490cc7",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    3,
+    11,
+    12,
+    13,
+    14,
+    15,
+    18,
+    19,
+    20,
+    21,
+    37,
+    38,
+    49
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "7382b3d1-d37d-4953-9cee-d4b926c3e901",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    3,
+    11,
+    12,
+    13,
+    14,
+    15,
+    18,
+    19,
+    20,
+    21,
+    37,
+    38
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "9be2a3cb-e686-4153-989c-2bcff95ca3fe",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    20,
+    22,
+    23,
+    24,
+    25,
+    30,
+    37,
+    45,
+    47,
+    49
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4517488009",
+   "q1": "yes",
+   "q1_lines": [
+    4,
+    5,
+    24,
+    27,
+    28
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4514870009",
+   "q1": "yes",
+   "q1_lines": [
+    4,
+    5,
+    22,
+    25,
+    26
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4515413009",
+   "q1": "yes",
+   "q1_lines": [
+    5,
+    7,
+    20,
+    23,
+    24
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4515467009",
+   "q1": "yes",
+   "q1_lines": [
+    17
+   ],
+   "q2": "other",
+   "hard": "The title says route driver, but the listed duties emphasize customer service and sales and do not describe driving."
+  },
+  {
+   "posting_id": "4506555009",
+   "q1": "yes",
+   "q1_lines": [
+    4,
+    5,
+    24,
+    27,
+    28
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4506698009",
+   "q1": "yes",
+   "q1_lines": [
+    4,
+    5,
+    7,
+    13,
+    22
+   ],
+   "q2": "driving_or_courier",
+   "hard": "The posting identifies a junk removal company and an overnight driver role, but does not specify the truck's cargo or route."
+  },
+  {
+   "posting_id": "4485442009",
+   "q1": "yes",
+   "q1_lines": [
+    4,
+    5,
+    24,
+    27,
+    28
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "4453213009",
+   "q1": "yes",
+   "q1_lines": [
+    4,
+    5,
+    9,
+    20,
+    21
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "8261153",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    11,
+    12,
+    14,
+    21,
+    23,
+    24,
+    25,
+    27,
+    29,
+    30,
+    33
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "8381818",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    3,
+    7,
+    8,
+    9,
+    11,
+    13,
+    16
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "8364894",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    10,
+    11,
+    14,
+    16,
+    18,
+    22,
+    25
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "8371654",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    14,
+    19
+   ],
+   "q2": "software_or_data",
+   "hard": "The posting describes fleet operations and vehicles but does not explicitly state their delivery use."
+  },
+  {
+   "posting_id": "8222713",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    4,
+    5,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17
+   ],
+   "q2": "dispatch_or_routing",
+   "hard": ""
+  },
+  {
+   "posting_id": "8185708",
+   "q1": "not_said",
+   "q1_lines": [],
+   "q2": "software_or_data",
+   "hard": ""
+  },
+  {
+   "posting_id": "7741137",
+   "q1": "yes",
+   "q1_lines": [
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    21,
+    22
+   ],
+   "q2": "software_or_data",
+   "hard": ""
+  },
+  {
+   "posting_id": "7998340003",
+   "q1": "yes",
+   "q1_lines": [
+    5,
+    12,
+    13,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+   ],
+   "q2": "dispatch_or_routing",
+   "hard": ""
+  },
+  {
+   "posting_id": "7785754003",
+   "q1": "yes",
+   "q1_lines": [
+    5,
+    11,
+    12,
+    13,
+    15,
+    17,
+    18,
+    20,
+    23,
+    24,
+    25,
+    26,
+    27,
+    29,
+    30,
+    32,
+    33,
+    34
+   ],
+   "q2": "dispatch_or_routing",
+   "hard": ""
+  },
+  {
+   "posting_id": "7628262003",
+   "q1": "yes",
+   "q1_lines": [
+    5,
+    16,
+    17,
+    21,
+    22,
+    23,
+    24,
+    26,
+    29,
+    33,
+    37
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "7609220003",
+   "q1": "yes",
+   "q1_lines": [
+    5,
+    9,
+    12,
+    13,
+    14,
+    17,
+    21
+   ],
+   "q2": "driving_or_courier",
+   "hard": ""
+  },
+  {
+   "posting_id": "5015000008",
+   "q1": "not_said",
+   "q1_lines": [],
+   "q2": "warehouse_or_store",
+   "hard": ""
+  },
+  {
+   "posting_id": "5485608008",
+   "q1": "yes",
+   "q1_lines": [
+    8,
+    9,
+    11,
+    12,
+    14,
+    16,
+    18,
+    47,
+    48
+   ],
+   "q2": "dispatch_or_routing",
+   "hard": ""
+  },
+  {
+   "posting_id": "9f2a200e-f02b-4fff-9548-d9ce4ac1a1aa",
+   "q1": "yes",
+   "q1_lines": [
+    1,
+    2,
+    4,
+    6,
+    8,
+    9,
+    11,
+    12,
+    14,
+    15,
+    16,
+    18,
+    23,
+    24,
+    28,
+    34
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "8935278002",
+   "q1": "not_said",
+   "q1_lines": [],
+   "q2": "other",
+   "hard": "The posting mentions prescription home delivery as a service but does not describe who runs its delivery operation."
+  },
+  {
+   "posting_id": "6216611004",
+   "q1": "not_said",
+   "q1_lines": [],
+   "q2": "warehouse_or_store",
+   "hard": ""
+  },
+  {
+   "posting_id": "6163386004",
+   "q1": "yes",
+   "q1_lines": [
+    3,
+    5,
+    6,
+    7,
+    23
+   ],
+   "q2": "dispatch_or_routing",
+   "hard": ""
+  },
+  {
+   "posting_id": "6150570004",
+   "q1": "no",
+   "q1_lines": [
+    2,
+    5,
+    6,
+    10,
+    11,
+    12,
+    13,
+    16,
+    26
+   ],
+   "q2": "software_or_data",
+   "hard": ""
+  },
+  {
+   "posting_id": "6265307004",
+   "q1": "yes",
+   "q1_lines": [
+    2,
+    3,
+    5,
+    6,
+    9,
+    11,
+    12,
+    14,
+    15,
+    22,
+    23
+   ],
+   "q2": "software_or_data",
+   "hard": ""
+  },
+  {
+   "posting_id": "ab504f2c-d125-4a99-a6ad-2e8e940494c6",
+   "q1": "not_said",
+   "q1_lines": [],
+   "q2": "other",
+   "hard": "The posting mentions medication delivery as part of care but does not describe who runs its delivery operation."
+  },
+  {
+   "posting_id": "4753997005",
+   "q1": "yes",
+   "q1_lines": [
+    13,
+    14,
+    16,
+    19,
+    20,
+    22,
+    23,
+    24,
+    25,
+    26,
+    28,
+    29,
+    30,
+    31,
+    38,
+    40,
+    41,
+    43,
+    44,
+    46,
+    49,
+    50,
+    51,
+    55
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "e37a68ff-d94f-4bb1-b265-f19ff06e5264",
+   "q1": "yes",
+   "q1_lines": [
+    8,
+    10,
+    11,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    23,
+    29
+   ],
+   "q2": "field_technician",
+   "hard": ""
+  },
+  {
+   "posting_id": "4713216006",
+   "q1": "yes",
+   "q1_lines": [
+    11,
+    12,
+    13,
+    14,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    35,
+    38,
+    41,
+    43,
+    44,
+    47,
+    49,
+    50,
+    54,
+    56,
+    57,
+    60,
+    68,
+    69,
+    70,
+    71,
+    79
+   ],
+   "q2": "delivery_operations_management",
+   "hard": ""
+  },
+  {
+   "posting_id": "4712661006",
+   "q1": "yes",
+   "q1_lines": [
+    7,
+    9,
+    11,
+    15
+   ],
+   "q2": "software_or_data",
+   "hard": ""
+  }
+ ]
+}

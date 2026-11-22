@@ -1,0 +1,146 @@
+{
+  "what_this_is": "Every sentence the page builds from data. Each reason is a count or a quote. Ages are as of the day the boards were checked. The wording test runs over this file.",
+  "groups": {
+    "brief_ready": "Brief ready",
+    "needs_person": "Needs a person",
+    "skipped": "Skipped"
+  },
+  "group_meaning": {
+    "brief_ready": "A new delivery-type job: posted in the last 30 days (60 for a leadership role), and not a repost of a job first posted over 90 days ago. \"Ready\" means the brief is ready, not that the company will buy. Ages are as of [d].",
+    "needs_person": "Something is unclear, and the row says what. Ages are as of [d].",
+    "skipped": "A check ruled it out. The row says which one. Ages are as of [d]."
+  },
+  "tags": {
+    "BRIEF_READY": "BRIEF READY",
+    "DATES_CLUSTERED": "DATES CLUSTERED",
+    "NOT_READ": "NOT READ",
+    "MODEL_UNSURE": "AI UNSURE",
+    "NO_RULE_FITS": "NO RULE FITS",
+    "READ_AS_OTHER_WORK": "NOT DELIVERY WORK",
+    "NO_DELIVERY_OPERATION_SHOWN": "NO OWN DELIVERIES",
+    "OLDER_COPIES_OPEN": "REPOSTED OLD JOB",
+    "SEASONAL": "SEASONAL",
+    "OUTSIDE_US": "OUTSIDE US",
+    "OPEN_A_WHILE": "OPEN A WHILE",
+    "NOTHING_NEW": "NOTHING NEW",
+    "NONE_QUALIFY": "NO NEW JOB QUALIFIES",
+    "PLACE_UNCLEAR": "PLACE UNCLEAR"
+  },
+  "reasons": {
+    "BRIEF_READY": "New role, [label] [nd] ago.[more]",
+    "DATES_CLUSTERED": "[a] of [b] postings on this board show dates no more than 14 days apart, so the dates may not show which jobs are new. A person opens two postings and checks whether the board was reposted in bulk.",
+    "NOT_READ": "A posting could not be read, or the line the AI picked is not in it. A person reads it.",
+    "MODEL_UNSURE": "The AI was unsure [what]. A person reads the posting.",
+    "NO_RULE_FITS": "No check fits this company. A person reads it.",
+    "READ_AS_OTHER_WORK": "The AI read [n] job title[s] with a delivery word here as other work.",
+    "NO_DELIVERY_OPERATION_SHOWN": "The postings the AI read do not show the company running delivery, fleet or field-service work, itself or through carriers it manages.",
+    "OLDER_COPIES_OPEN": "[k] delivery job[s] got a new posting here, but [each] was first posted at the company more than 90 days ago. A repost of a long-open job does not count as new.",
+    "SEASONAL": "The only new delivery jobs say seasonal or temporary.",
+    "OUTSIDE_US": "No delivery job read here is in the United States, or its place could not be read.",
+    "OPEN_A_WHILE": "The newest posting for a job the AI read as delivery work is [nd] old.",
+    "NOTHING_NEW": "The newest posting for a job the AI read as delivery work is [nd] old.",
+    "NOTHING_NEW_UNREAD": "The newest posting with a delivery word in its title is [nd] old.",
+    "NONE_QUALIFY": "Each new delivery job here is outside the US, seasonal, an old job reposted, or one the AI did not read as delivery work at this company.",
+    "BRIEF_READY_LEADER": "New leadership role, [label] [nd] ago (leadership roles count as new for [lead] days).[more]",
+    "BRIEF_READY_REPOST": "Newest posting [md] ago; [label] [nd] ago.",
+    "PLACE_UNCLEAR": "The AI read a new job here as delivery work, but its place says only \"[place]\", so the check could not tell whether it is in the United States. A person checks.",
+    "MORE_READY": "[n] more new role[s] [v] the same way."
+  },
+  "brief": {
+    "runs_operation": "The AI picked this line from [lead] as proof that the company runs deliveries, routes, a fleet or field visits, itself or through carriers it manages.",
+    "roles": "[n] delivery job posting[ns] [where]: [r] different job[rs] in [p] location[ps].",
+    "new_roles": "New jobs (a posting in the last 30 days, or 60 for a leadership role): [k] of [r].",
+    "old_role": "[title]: newest posting is [nd] old.",
+    "set_apart": "[n] delivery job postings on this board are for a second business that does different work. Left out.",
+    "local_brands": "[n] of [b] postings on this board are listed under other business names.",
+    "not_known": "Not known: company size ([boards] [t] open posting[s] in all), and whether the company is already a customer or in a deal.",
+    "on_board": "on its job board",
+    "on_boards": "on its [b] job boards",
+    "old_more": "[m] more job[s] whose newest posting is over 90 days old.",
+    "its_board_lists": "its job board lists",
+    "its_boards_list": "its job boards list",
+    "tools": "Tools or systems named in [lead]: [names].",
+    "mentions_carriers": "The line mentions carriers.",
+    "lead_same": "the posting",
+    "lead_other": "its [job] posting",
+    "software": "Delivery or dispatch software named in [lead]: [names].",
+    "also_names": "It also names [names]."
+  },
+  "notes": {
+    "ask": "How are these routes planned and handed to drivers today?",
+    "do_not_assume": "That anything is wrong, or that they are looking for software.",
+    "buyers_note": "The people who post driver jobs are rarely the buyers. This contact is my guess, based on the company's market.",
+    "ask_by_kind": {
+      "delivery_operations_management": "While you hire a [title], what happens today when a delivery runs late or fails?",
+      "driving_or_courier": "While you add drivers[in_place], what happens today when a delivery or pickup runs late or fails?",
+      "dispatch_or_routing": "While you hire a dispatcher, what happens today when a technician runs late or a job runs long?",
+      "fleet_management": "While you hire a [title], which vehicles, drivers and jobs are tracked in one place today, and which are not?",
+      "field_technician": "While you hire technicians[in_place], what happens today when a job runs long or a technician runs late?"
+    },
+    "to_leader": "the person this new [title] will report to, and the new hire once they start",
+    "ask_tools": "The posting mentions [tools]. How is a late or failed delivery handled today, and which tools are part of that?",
+    "ask_tools_by_kind": {
+      "dispatch_or_routing": "The posting mentions [tools]. How is a technician running late or a job running long handled today, and which tools are part of that?",
+      "field_technician": "The posting mentions [tools]. How is a job running long or a technician running late handled today, and which tools are part of that?",
+      "fleet_management": "The posting mentions [tools]. Which vehicles, drivers and jobs are tracked in one place today, and which are not?"
+    },
+    "do_not_assume_tools": "That anything is wrong, or that they want to replace the tools they name.",
+    "to_reports": "the person named in the posting's reporting line",
+    "to_reports_leader": "the person named in the posting's reporting line, and the new hire once they start",
+    "generic_tools": [
+      "delivery app",
+      "delivery application",
+      "handheld device",
+      "routing software",
+      "route optimization software",
+      "dispatch software"
+    ],
+    "to_note_finance": "This role reports into [word]; delivery and dispatch decisions may sit with operations.",
+    "ask_software": "The posting names [tools]. Where does it fit in how deliveries are planned and dispatched today, and where does a person still have to step in?",
+    "do_not_assume_software": "How that software is working for them, or that they want to switch.",
+    "delivery_software": [
+      "Burq",
+      "Routific",
+      "Route4Me",
+      "OptimoRoute",
+      "Descartes",
+      "Roadnet",
+      "DispatchTrack",
+      "WorkWave",
+      "Service Titan",
+      "ServiceTitan"
+    ],
+    "fits": {
+      "carriers": "Assigning and managing outside delivery providers.",
+      "delivery_operations_management": "Dispatching and tracking deliveries, and keeping the delivery promise.",
+      "driving_or_courier": "Dispatching and tracking deliveries or pickups, and keeping the promised window.",
+      "dispatch_or_routing": "Dispatching and assigning the work, and holding the promised window.",
+      "field_technician": "Sending the right technician and keeping appointment windows.",
+      "fleet_management": "Running people and vehicles in one place."
+    },
+    "fits_label": "Where it fits Nash",
+    "fits_note": "My reading of Nash's public product pages.",
+    "ask_software_by_kind": {
+      "dispatch_or_routing": "The posting names [tools]. Where does it fit in how jobs are scheduled and dispatched today, and where does a person still have to step in?",
+      "field_technician": "The posting names [tools]. Where does it fit in how jobs are scheduled and dispatched today, and where does a person still have to step in?",
+      "fleet_management": "The posting names [tools]. Which vehicles, drivers and jobs are tracked in it today, and which are tracked somewhere else?"
+    }
+  },
+  "steps": {
+    "signal": "Checked [d]: [n] posting[ns] with a delivery word in the title, on [b].",
+    "read_model": "The AI answered 2 fixed questions about [k] of them.",
+    "read_key": "The answer key stands in for the AI here: 2 fixed questions about [k] of them.",
+    "checked": "Plain code counted [r] job[rs], with dates, locations and reposts.",
+    "decided": "Plain code sorted the company with check [rule] of the sorting list under How it was tested.",
+    "signal_set_apart": "Checked [d]: [n] postings with a delivery word in the title, on [b]; [a] of them are for a second business and are left out."
+  },
+  "unsure_what": {
+    "q1": "whether this company runs deliveries or field work, itself or through carriers it manages",
+    "q2": "whether this job is mainly delivery, dispatch or fleet work",
+    "both": "whether this company runs deliveries or field work, itself or through carriers it manages, and whether the job is that work"
+  },
+  "skipped_parts": {
+    "runs_deliveries": "Delivery work, nothing new here",
+    "not_delivery": "Not delivery work here"
+  }
+}

@@ -1,0 +1,92 @@
+{
+ "what_this_is": "The data rules, in one file. Plain code reads them. They are part of the lock: after the lock, any change is logged with its reason and which way it moved each count.",
+ "title_words_pattern": "\\b(delivery|deliveries|delivering|dispatch|dispatcher|dispatchers|driver|drivers|courier|couriers|fleet|fleets|last[ -]mile|logistics|transportation|routing|routes?|field (service )?technicians?)\\b",
+ "title_words_plain": "delivery, deliveries, delivering, dispatch, dispatcher(s), driver(s), courier(s), fleet(s), last mile, logistics, transportation, routing, route(s), field technician(s), field service technician(s)",
+ "role": {
+  "drop_leading": "copy of",
+  "split_on": [
+   " - ",
+   "- ",
+   " -",
+   "|",
+   " (",
+   " – ",
+   " — "
+  ],
+  "keep": "the first part that holds a delivery-type word, else the first part; lower case; punctuation removed"
+ },
+ "name_check": {
+  "shown_if": "the feed states the company's name, or at least this many postings name the company in their own text",
+  "min_postings_naming": 3,
+  "match": "whole word; curly apostrophes made straight; exact case for names of 3 letters or fewer"
+ },
+ "set_apart": [
+  {
+   "board": "greenhouse:carvana",
+   "why": "This board also carries a second business that does different work (car auctions). Written for this board after reading it.",
+   "title_contains": [
+    "ADESA"
+   ],
+   "department_matches": "auction|adesa"
+  }
+ ],
+ "local_brands": [
+  {
+   "board": "lever:sila",
+   "why": "This board's department field carries local brand names of the same kind of business under one owner. They stay in the account; the brief counts them.",
+   "brand_is": "the part of the department before ' / '",
+   "own_name": "Sila"
+  }
+ ],
+ "cap_roles_per_company": 8,
+ "cap_order": "leadership titles first, then newest date, then posting id",
+ "days": {
+  "new": 30,
+  "new_leader": 60,
+  "old": 90
+ },
+ "clustered": {
+  "min_postings": 20,
+  "span_days": 14,
+  "share": 0.8,
+  "only_with_a_sign": true
+ },
+ "seasonal": {
+  "title_pattern": "(?<!non-)(?<!non )\\b(seasonal|holiday|temporary|temp|peak)\\b",
+  "text_pattern": "(?<!non-)(?<!non )\\b(seasonal (?:position|role|job|employment|opportunity|driver|delivery|associate|help|hire|work)|temporary (?:position|role|assignment|job|employment|driver|associate)|peak season|holiday season|for the holidays? season)\\b"
+ },
+ "region": "Lever's country field when the posting has one; otherwise a US state or 'United States' in the place text means US; a place that names another country is not US; anything else is 'place not readable', which is not counted and is counted as such.",
+ "dates": {
+  "greenhouse": {
+   "field": "first_published",
+   "label": "first published, per the board"
+  },
+  "lever": {
+   "field": "createdAt",
+   "label": "created, per the board"
+  },
+  "ashby": {
+   "field": "publishedAt",
+   "label": "last published, per the board",
+   "can_be_new": false
+  }
+ },
+ "practice": {
+  "source": "delivery-titled postings saved on 2026-11-10 from Greenhouse, Lever and Ashby boards",
+  "exclude": "any company on the board list, by name, board or web address, including other boards and subsidiaries named in exclude_extra",
+  "exclude_extra": [
+   "adesa",
+   "daniels-sharpsmart",
+   "carvana.com"
+  ],
+  "per_company": 2,
+  "sort": "company, then address",
+  "size": 30,
+  "seed": 20261121
+ },
+ "leader_pattern": "\\b(manager|director|head of|vice president|vp|chief)\\b",
+ "version": "2",
+ "tool_words_pattern": "\\b(Burq|Service ?Titan|TMS|WMS|OMS|FSM|telematics|Geotab|Motive|Lytx|Omnitracs|Verizon Connect|NexTraq|D365|Dynamics 365|Intacct|Routific|Route4Me|OptimoRoute|Descartes|Roadnet|DispatchTrack|WorkWave|ELD|transportation management system|warehouse management system|routing software|route optimization software|dispatch software|handheld device|delivery app(lication)?)\\b",
+ "reports_to_pattern": "\\breports?(ing)?\\s*(directly\\s*)?(in)?to\\b",
+ "tools_and_reports_note": "Plain code finds, in each posting the model read, up to two lines naming tools or systems the company uses today, and the first line naming who the job reports to. A line holding a name on the private keep-out list is never kept."
+}

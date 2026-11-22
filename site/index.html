@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Signal to Brief · unofficial prototype</title>
+<meta name="description" content="A prototype that turns a company's new delivery hiring into a short, sourced brief for a sales rep. Made by Dakshit Raj for a Nash job application; not affiliated with Nash.">
+<meta property="og:title" content="Signal to Brief">
+<meta property="og:description" content="A company hiring for delivery is a reason to look. 21 companies from 71 public job boards, each with a sourced brief, and a test against an answer key.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://duckky153.github.io/signal-to-brief/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%2301051E'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <span class="name">Signal to Brief</span>
+  <span class="label" id="tag"><span class="long">Made by Dakshit Raj for a Nash job application · not affiliated with Nash</span><span class="short"><span class="nw">By Dakshit Raj</span> <span class="nw">· not affiliated with Nash</span></span></span>
+</header>
+
+<section class="hero">
+  <p class="eyebrow" id="eyebrow">Public job postings</p>
+  <h1>A company hiring for delivery is a reason to look.</h1>
+  <p class="sub" id="sub"></p>
+  <p class="proof" id="proof" hidden></p>
+  <div class="ctas">
+    <button class="btn btn-accent" id="open-first" type="button">Open the first brief →</button>
+    <a class="btn" href="#tested">How it was tested</a>
+    <a class="btn" href="https://github.com/Duckky153/signal-to-brief" target="_blank" rel="noopener">The code on GitHub ↗</a>
+  </div>
+  <span class="preview" id="preview" hidden></span>
+</section>
+
+<main>
+  <div class="overview" role="group" id="overview" aria-label="Groups"></div>
+
+  <div class="board" id="board">
+    <div class="board-head"><h2 id="board-title"></h2><span class="detail" id="board-meaning"></span></div>
+    <div class="rows" id="rows"></div>
+  </div>
+  <p class="after detail" id="after"></p>
+
+  <section class="tested" id="tested">
+    <p class="section-eyebrow">How it was tested</p>
+    <h2 id="score-title" tabindex="-1"></h2>
+    <p class="soft" id="score-caption"></p>
+    <div class="score-wrap"><table class="score" id="score" aria-labelledby="score-title"></table></div>
+    <div class="plain" id="plain"></div>
+    <div class="folds" id="folds"></div>
+    <p class="runline" id="runline"></p>
+  </section>
+</main>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panel-title" hidden></aside>
+<script type="module" src="app.js"></script>
+</body>
+</html>

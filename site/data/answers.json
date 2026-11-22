@@ -1,0 +1,1602 @@
+{
+ "source": "model",
+ "run": {
+  "model": "jev-1.14.0",
+  "question_version": "stb-v6",
+  "set": "scored",
+  "reversed": false,
+  "again": false,
+  "started": "2026-11-22T00:50:49",
+  "finished": "2026-11-22T00:51:00",
+  "calls": 78,
+  "errors": [],
+  "input_tokens": 220045,
+  "cost_dollars": 0.009242,
+  "price_per_million": 0.042,
+  "price_read": "docs.typesafe.ai/models.md, re-read 2026-11-21",
+  "cap_dollars": 1.0,
+  "texts_fingerprint": "4c59ec1022cdd02781a9da1f6c5cd34518319849011321916af021dbc3c88e29",
+  "locked": {
+   "commit": "691cdeb707c15b0180bbbfe2ce31db8f2ffd5cc1",
+   "files": {
+    "cache/role-texts.json": "a5582eb1e50f08cb550f34d937992beae20d8e83949074ad5191925a0dfae6a7",
+    "data/rules.json": "23cc6f5b7bbbe1dea931c104dad1762d412298ad09c6acc1e20f35d02f10c496",
+    "data/LABEL-RULES.md": "42d2705906b52c9558aa2b678962164606a0575734b7b3dc06c62b197190623d",
+    "site/data/questions.json": "3c93526cc8e4e27a7a2e463c1874ef16757dba97ffed8d5cc45b389efb4ba195",
+    "site/data/key.json": "6cacc2238a7054adde6f3d88895b57567bde6c4c7a4b401fe7f4f6a3c7017b2b",
+    "site/data/second-labeling.json": "ed8d65839d48f37acb9038b90526bd68cbaed476c0ac235cd83e0eac6e1277a8",
+    "site/data/disputes.json": "1013cd6702bae04e62e243dc5bb041443c23e157c9f5149be1d5b285d4a29775",
+    "site/engine.js": "4725f26bb610d3abedabf99ee77b34dc6420fda88f85e317547f056a707194b2",
+    "score.mjs": "f066aaf4d03b955ec99048c7996624ab6a45617fd3703926af9f625fcde8c7df",
+    "baseline.mjs": "865d03195bd6f37d0bfdacd860b18778ec5c630f967c2b6807543bac7135d8ba",
+    "site/data/baseline-answers.json": "e8bc93bd44063ddcaf311cfb5943c7db2e4ccd90aa6c400315a09b45195cac87",
+    "generate.py": "2e52fb42612c7b34c4d9dfae6b753995059869ce25a25f8011b4c8fd3eeeeed4",
+    "read_postings.py": "01f8d036eb980687a96b96df7f4d3cd815f6f1e0d92ff672f3509a53f8b10a88"
+   }
+  }
+ },
+ "answers": [
+  {
+   "posting_id": "0c5f8298-2902-4159-a489-362f0d02c3d3",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.01,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.99
+   },
+   "q1_line": "L014",
+   "q1_line_p": 0.26
+  },
+  {
+   "posting_id": "1f27f8be-e165-486f-9c32-ab95c803d762",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.01,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.99
+   },
+   "q1_line": "L006",
+   "q1_line_p": 0.67
+  },
+  {
+   "posting_id": "caf30146-e3a5-4188-94ce-df9c32df52cd",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.02,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.98
+   },
+   "q1_line": "L014",
+   "q1_line_p": 0.32
+  },
+  {
+   "posting_id": "290f5e77-a845-4420-8ba2-afc2a48ec0cb",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.01,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.99
+   },
+   "q1_line": "L006",
+   "q1_line_p": 0.67
+  },
+  {
+   "posting_id": "d53b8e0c-c3eb-44c2-ab8b-fe371e3e6b88",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.01,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.99
+   },
+   "q1_line": "L014",
+   "q1_line_p": 0.26
+  },
+  {
+   "posting_id": "008cc737-3987-4436-8850-2a378251122a",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.01,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.99
+   },
+   "q1_line": "L006",
+   "q1_line_p": 0.62
+  },
+  {
+   "posting_id": "65da0e6a-74bf-4c60-8936-d29b7d8e7902",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.01,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.99
+   },
+   "q1_line": "L006",
+   "q1_line_p": 0.68
+  },
+  {
+   "posting_id": "cce1dca3-6402-428f-b557-0832bc65d52f",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L024",
+   "q1_line_p": 0.72
+  },
+  {
+   "posting_id": "8406918",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.01,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.04,
+    "delivery_operations_management": 0.92,
+    "dispatch_or_routing": 0.03,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L027",
+   "q1_line_p": 0.73
+  },
+  {
+   "posting_id": "8407033",
+   "q1": {
+    "not_said": 0.01,
+    "no": 0.0,
+    "yes": 0.99
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.02,
+    "delivery_operations_management": 0.89,
+    "dispatch_or_routing": 0.09,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L014",
+   "q1_line_p": 0.7
+  },
+  {
+   "posting_id": "8407262",
+   "q1": {
+    "not_said": 0.08,
+    "no": 0.0,
+    "yes": 0.92
+   },
+   "q2": {
+    "other": 0.01,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.02,
+    "delivery_operations_management": 0.96,
+    "dispatch_or_routing": 0.01,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L032",
+   "q1_line_p": 0.79
+  },
+  {
+   "posting_id": "8360059",
+   "q1": {
+    "not_said": 0.02,
+    "no": 0.02,
+    "yes": 0.96
+   },
+   "q2": {
+    "other": 0.01,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.01,
+    "field_technician": 0.0,
+    "fleet_management": 0.04,
+    "delivery_operations_management": 0.84,
+    "dispatch_or_routing": 0.1,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L013",
+   "q1_line_p": 0.6
+  },
+  {
+   "posting_id": "8405740",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L033",
+   "q1_line_p": 0.98
+  },
+  {
+   "posting_id": "8405745",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L033",
+   "q1_line_p": 0.98
+  },
+  {
+   "posting_id": "8405748",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L036",
+   "q1_line_p": 0.95
+  },
+  {
+   "posting_id": "8405749",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.01,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.99
+   },
+   "q1_line": "L033",
+   "q1_line_p": 0.98
+  },
+  {
+   "posting_id": "4502512009",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.02,
+    "delivery_operations_management": 0.98,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L002",
+   "q1_line_p": 0.23
+  },
+  {
+   "posting_id": "4502787009",
+   "q1": {
+    "not_said": 0.16,
+    "no": 0.01,
+    "yes": 0.83
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.99,
+    "delivery_operations_management": 0.01,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L010",
+   "q1_line_p": 0.33
+  },
+  {
+   "posting_id": "4504236009",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.01,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.2,
+    "delivery_operations_management": 0.77,
+    "dispatch_or_routing": 0.02,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L012",
+   "q1_line_p": 0.32
+  },
+  {
+   "posting_id": "4504383009",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L002",
+   "q1_line_p": 0.37
+  },
+  {
+   "posting_id": "4502401009",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L004",
+   "q1_line_p": 0.25
+  },
+  {
+   "posting_id": "4502437009",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L008",
+   "q1_line_p": 0.51
+  },
+  {
+   "posting_id": "4502449009",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L002",
+   "q1_line_p": 0.51
+  },
+  {
+   "posting_id": "4502558009",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L008",
+   "q1_line_p": 0.45
+  },
+  {
+   "posting_id": "7804755003",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L003",
+   "q1_line_p": 0.84
+  },
+  {
+   "posting_id": "7796249003",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.01,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.99
+   },
+   "q1_line": "L003",
+   "q1_line_p": 0.61
+  },
+  {
+   "posting_id": "7491068003",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L003",
+   "q1_line_p": 0.73
+  },
+  {
+   "posting_id": "6642393003",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L003",
+   "q1_line_p": 0.67
+  },
+  {
+   "posting_id": "6234425004",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.99,
+    "dispatch_or_routing": 0.01,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L010",
+   "q1_line_p": 0.82
+  },
+  {
+   "posting_id": "6267870004",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.01,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.99
+   },
+   "q1_line": "L017",
+   "q1_line_p": 0.86
+  },
+  {
+   "posting_id": "6265566004",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.01,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.99
+   },
+   "q1_line": "L021",
+   "q1_line_p": 0.62
+  },
+  {
+   "posting_id": "6263431004",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L017",
+   "q1_line_p": 0.63
+  },
+  {
+   "posting_id": "6240678004",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.06,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.94
+   },
+   "q1_line": "L013",
+   "q1_line_p": 0.97
+  },
+  {
+   "posting_id": "6232577004",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.01,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.99
+   },
+   "q1_line": "L021",
+   "q1_line_p": 0.66
+  },
+  {
+   "posting_id": "6232062004",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.05,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.95
+   },
+   "q1_line": "L015",
+   "q1_line_p": 0.89
+  },
+  {
+   "posting_id": "6225136004",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.03,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.97
+   },
+   "q1_line": "L013",
+   "q1_line_p": 0.94
+  },
+  {
+   "posting_id": "b53d4034-e719-4fd3-b948-7c79bc04f682",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 1.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L007",
+   "q1_line_p": 0.78
+  },
+  {
+   "posting_id": "b3c14833-55b6-4d72-8a62-5f7f1be2f64d",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.01,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.15,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.84
+   },
+   "q1_line": "L017",
+   "q1_line_p": 0.78
+  },
+  {
+   "posting_id": "edc1efc6-13e4-4d00-a8cd-e6dd9dfb858e",
+   "q1": {
+    "not_said": 0.11,
+    "no": 0.01,
+    "yes": 0.88
+   },
+   "q2": {
+    "other": 0.03,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.22,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.75
+   },
+   "q1_line": "none",
+   "q1_line_p": 0.39
+  },
+  {
+   "posting_id": "38224d9d-63f3-4fa3-8e35-c2bbb2cce88b",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 1.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L008",
+   "q1_line_p": 0.61
+  },
+  {
+   "posting_id": "cbe7fe43-69ce-4c3c-a831-070365e4b0a8",
+   "q1": {
+    "not_said": 0.05,
+    "no": 0.02,
+    "yes": 0.93
+   },
+   "q2": {
+    "other": 0.01,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.3,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.69
+   },
+   "q1_line": "none",
+   "q1_line_p": 0.3
+  },
+  {
+   "posting_id": "8b51a1a8-aac2-4828-a766-8ac3f08eaef0",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.01,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.99,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L011",
+   "q1_line_p": 0.87
+  },
+  {
+   "posting_id": "7171aa4e-342c-4727-8cb8-1853f8785bd8",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L015",
+   "q1_line_p": 0.24
+  },
+  {
+   "posting_id": "0e00f385-df06-4f0f-8476-c91757490cc7",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L013",
+   "q1_line_p": 0.29
+  },
+  {
+   "posting_id": "7382b3d1-d37d-4953-9cee-d4b926c3e901",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 1.0
+   },
+   "q1_line": "L002",
+   "q1_line_p": 0.31
+  },
+  {
+   "posting_id": "9be2a3cb-e686-4153-989c-2bcff95ca3fe",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.03,
+    "dispatch_or_routing": 0.01,
+    "driving_or_courier": 0.96
+   },
+   "q1_line": "L015",
+   "q1_line_p": 0.45
+  },
+  {
+   "posting_id": "4517488009",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.02,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.03,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.95
+   },
+   "q1_line": "L028",
+   "q1_line_p": 0.69
+  },
+  {
+   "posting_id": "4514870009",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.02,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.03,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.95
+   },
+   "q1_line": "L026",
+   "q1_line_p": 0.71
+  },
+  {
+   "posting_id": "4515413009",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.04,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.05,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.91
+   },
+   "q1_line": "L024",
+   "q1_line_p": 0.67
+  },
+  {
+   "posting_id": "4515467009",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.02,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.03,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.95
+   },
+   "q1_line": "L017",
+   "q1_line_p": 0.62
+  },
+  {
+   "posting_id": "4506555009",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.02,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.04,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.94
+   },
+   "q1_line": "L028",
+   "q1_line_p": 0.77
+  },
+  {
+   "posting_id": "4506698009",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.01,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.99
+   },
+   "q1_line": "L022",
+   "q1_line_p": 0.81
+  },
+  {
+   "posting_id": "4485442009",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.02,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.05,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.93
+   },
+   "q1_line": "L028",
+   "q1_line_p": 0.8
+  },
+  {
+   "posting_id": "4453213009",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.02,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.02,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.14,
+    "dispatch_or_routing": 0.33,
+    "driving_or_courier": 0.49
+   },
+   "q1_line": "L009",
+   "q1_line_p": 0.91
+  },
+  {
+   "posting_id": "8261153",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 1.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L011",
+   "q1_line_p": 0.91
+  },
+  {
+   "posting_id": "8381818",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.04,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.94,
+    "dispatch_or_routing": 0.02,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L016",
+   "q1_line_p": 0.5
+  },
+  {
+   "posting_id": "8364894",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.03,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.97,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L005",
+   "q1_line_p": 0.67
+  },
+  {
+   "posting_id": "8371654",
+   "q1": {
+    "not_said": 0.01,
+    "no": 0.0,
+    "yes": 0.99
+   },
+   "q2": {
+    "other": 0.02,
+    "software_or_data": 0.67,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.12,
+    "delivery_operations_management": 0.19,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L002",
+   "q1_line_p": 0.92
+  },
+  {
+   "posting_id": "8222713",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.01,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.86,
+    "dispatch_or_routing": 0.13,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L002",
+   "q1_line_p": 0.76
+  },
+  {
+   "posting_id": "8185708",
+   "q1": {
+    "not_said": 0.65,
+    "no": 0.25,
+    "yes": 0.1
+   },
+   "q2": {
+    "other": 0.28,
+    "software_or_data": 0.46,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.22,
+    "dispatch_or_routing": 0.04,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "none",
+   "q1_line_p": 0.73
+  },
+  {
+   "posting_id": "7741137",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.33,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.67,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L019",
+   "q1_line_p": 0.76
+  },
+  {
+   "posting_id": "7998340003",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.01,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.61,
+    "dispatch_or_routing": 0.38,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L013",
+   "q1_line_p": 0.43
+  },
+  {
+   "posting_id": "7785754003",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.01,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.24,
+    "dispatch_or_routing": 0.75,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L005",
+   "q1_line_p": 0.58
+  },
+  {
+   "posting_id": "7628262003",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.06,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.03,
+    "dispatch_or_routing": 0.06,
+    "driving_or_courier": 0.85
+   },
+   "q1_line": "L017",
+   "q1_line_p": 0.47
+  },
+  {
+   "posting_id": "7609220003",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.02,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.98
+   },
+   "q1_line": "L017",
+   "q1_line_p": 0.39
+  },
+  {
+   "posting_id": "5015000008",
+   "q1": {
+    "not_said": 0.31,
+    "no": 0.46,
+    "yes": 0.23
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 1.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "none",
+   "q1_line_p": 0.93
+  },
+  {
+   "posting_id": "5485608008",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 1.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L011",
+   "q1_line_p": 0.89
+  },
+  {
+   "posting_id": "9f2a200e-f02b-4fff-9548-d9ce4ac1a1aa",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.01,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.99,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L002",
+   "q1_line_p": 0.44
+  },
+  {
+   "posting_id": "8935278002",
+   "q1": {
+    "not_said": 0.14,
+    "no": 0.11,
+    "yes": 0.75
+   },
+   "q2": {
+    "other": 0.99,
+    "software_or_data": 0.01,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L020",
+   "q1_line_p": 0.76
+  },
+  {
+   "posting_id": "6216611004",
+   "q1": {
+    "not_said": 0.39,
+    "no": 0.03,
+    "yes": 0.58
+   },
+   "q2": {
+    "other": 0.04,
+    "software_or_data": 0.01,
+    "warehouse_or_store": 0.69,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.25,
+    "dispatch_or_routing": 0.01,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "none",
+   "q1_line_p": 0.66
+  },
+  {
+   "posting_id": "6163386004",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.02,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.87,
+    "dispatch_or_routing": 0.11,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L006",
+   "q1_line_p": 0.53
+  },
+  {
+   "posting_id": "6150570004",
+   "q1": {
+    "not_said": 0.12,
+    "no": 0.81,
+    "yes": 0.07
+   },
+   "q2": {
+    "other": 0.02,
+    "software_or_data": 0.98,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "none",
+   "q1_line_p": 0.96
+  },
+  {
+   "posting_id": "6265307004",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.04,
+    "software_or_data": 0.75,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.21,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L014",
+   "q1_line_p": 0.39
+  },
+  {
+   "posting_id": "ab504f2c-d125-4a99-a6ad-2e8e940494c6",
+   "q1": {
+    "not_said": 0.3,
+    "no": 0.39,
+    "yes": 0.31
+   },
+   "q2": {
+    "other": 1.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "none",
+   "q1_line_p": 0.76
+  },
+  {
+   "posting_id": "4753997005",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.03,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.96,
+    "dispatch_or_routing": 0.01,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L024",
+   "q1_line_p": 0.84
+  },
+  {
+   "posting_id": "e37a68ff-d94f-4bb1-b265-f19ff06e5264",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.0,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 1.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.0,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L010",
+   "q1_line_p": 0.96
+  },
+  {
+   "posting_id": "4713216006",
+   "q1": {
+    "not_said": 0.0,
+    "no": 0.0,
+    "yes": 1.0
+   },
+   "q2": {
+    "other": 0.03,
+    "software_or_data": 0.0,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.9,
+    "dispatch_or_routing": 0.07,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L024",
+   "q1_line_p": 0.82
+  },
+  {
+   "posting_id": "4712661006",
+   "q1": {
+    "not_said": 0.05,
+    "no": 0.01,
+    "yes": 0.94
+   },
+   "q2": {
+    "other": 0.02,
+    "software_or_data": 0.91,
+    "warehouse_or_store": 0.0,
+    "field_technician": 0.0,
+    "fleet_management": 0.0,
+    "delivery_operations_management": 0.07,
+    "dispatch_or_routing": 0.0,
+    "driving_or_courier": 0.0
+   },
+   "q1_line": "L007",
+   "q1_line_p": 0.74
+  }
+ ],
+ "model": "Jev (jev-1.14.0)",
+ "cost": "$0.0092"
+}
