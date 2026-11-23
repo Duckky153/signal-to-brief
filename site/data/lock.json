@@ -589,6 +589,110 @@
    "reason": "After the re-checks: up to three tool lines per posting, each naming a tool the lines before it did not (it was two lines, even when both repeated one word). Quotes generated again: only Sila Services' posting changed, now quoting the line that names ServiceTitan and Intacct instead of a second telematics line.",
    "moved": "No group or score moved.",
    "previous": "65a535694c6ff40494bcb5238ce046cbe6bc5e570b51e15a3f6caa98ccf077a6"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T18:06:25",
+   "files": {
+    "site/engine.js": {
+     "sha256": "8368a58f266817d054c3387878751c163949f15ff24de260d3ec16353137c9ef",
+     "before": "8bd1327c5c4c423ae6bd4078333032cee4b6905353ce73f581be657241d87b28"
+    }
+   },
+   "reason": "Less text, at his note on the draft video (\"there's too much written ... it's hard to read\"): each reason also carries a short sentence for its row, filled from the same values; the full sentence stays in the brief. The proof line, the carriers note and the new-jobs line are shorter.",
+   "moved": "No group or score moved.",
+   "previous": "9a56835377c1cd9b9996bc05ba4f7ee6ed7145b291a1796b088357b9056ba6a1"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T18:06:25",
+   "files": {
+    "score.mjs": {
+     "sha256": "ba0fb31c5cd6f3b06f5543c5e15aadaa7b065ee28be920cf71f64feb9cf80572",
+     "before": "9baddc12ca32bb6a09c2032e9d91e7cab245aee258f12e72c85ffc414d97671f"
+    }
+   },
+   "reason": "Less text: the notes in the test table and the lines under it are shorter; the detail (generous proof lists, the practice cutoff, the title rule written with every title in view, the boards used, the left-out posting) moved into the folds.",
+   "moved": "No score moved: every row, count and disagreement is unchanged.",
+   "previous": "83c9a663e4751539405427d38e49262e84b9334e3a53708925b95713fc48702e"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T18:24:26",
+   "files": {
+    "score.mjs": {
+     "sha256": "067ac27d26a7e7b74d958eb30a1d8a70bb3a9c07b032695c1f72435d527bd6a2",
+     "before": "ba0fb31c5cd6f3b06f5543c5e15aadaa7b065ee28be920cf71f64feb9cf80572"
+    }
+   },
+   "reason": "After a fresh check of the text cut: the practice-cutoff sentence in the questions fold names its percent and its set.",
+   "moved": "No score moved.",
+   "previous": "527090ae5f1fbfc73112b6227998cd2c8fa10541d841c3a81aac65610d773441"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T18:29:48",
+   "files": {
+    "score.mjs": {
+     "sha256": "38d95bc61d6c65ee12e11ca4e1bdba068ea14fc3d20552dc8ccec6bc6c50629a",
+     "before": "067ac27d26a7e7b74d958eb30a1d8a70bb3a9c07b032695c1f72435d527bd6a2"
+    }
+   },
+   "reason": "After the re-check of the text cut: the disagreements note no longer repeats the agreement numbers shown just above it.",
+   "moved": "No score moved.",
+   "previous": "96d1a881067387c73a1b15252a8bcac2cd767bcbcfcfd2ebde59644857cbe4a1"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T18:35:54",
+   "files": {
+    "score.mjs": {
+     "sha256": "0dd65d60bf340b258e4db86ffe2b12c2627ce5e76f9c61478472d590cdcee7a2",
+     "before": "38d95bc61d6c65ee12e11ca4e1bdba068ea14fc3d20552dc8ccec6bc6c50629a"
+    }
+   },
+   "reason": "Plain words: the line on what would be measured with real reps also says the reps' choices would tune the rules (moved from the brief panel).",
+   "moved": "No score moved.",
+   "previous": "61cd38f322ef4fded722d9435209ef9eb106c0a601159dc8742134f500023d41"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T18:52:10",
+   "files": {
+    "site/engine.js": {
+     "sha256": "2c362a16f1a0742ac2420fee05eb4045277e49335ed54919527052d47c58cfff",
+     "before": "8368a58f266817d054c3387878751c163949f15ff24de260d3ec16353137c9ef"
+    }
+   },
+   "reason": "Plain words, at his note that some lines read as AI-generated: the code picks the natural sentence (All 137 when every date falls in 14 days; one job, one posting; one repost), names what the AI read a job as, and leaves tool names unquoted in the questions.",
+   "moved": "No group or score moved.",
+   "previous": "6331fdde7502c117bad9de48093ff92ad013f4d2088bc90eda56da8acaa99902"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T18:52:10",
+   "files": {
+    "score.mjs": {
+     "sha256": "b816a4ccddc0cac5dc6253e3845e21d1a91586c95cfe7fae9559d4dd9f1e948e",
+     "before": "0dd65d60bf340b258e4db86ffe2b12c2627ce5e76f9c61478472d590cdcee7a2"
+    }
+   },
+   "reason": "Plain words: the test notes, the disagreements note, the split note and the fold lines reworded; no repeated caveats.",
+   "moved": "No score moved.",
+   "previous": "eff828bf9a30af8917371986683cb6f23640f09b20af826fcdda55562ca42df1"
+  },
+  {
+   "kind": "change",
+   "date": "2026-11-22T18:58:59",
+   "files": {
+    "site/engine.js": {
+     "sha256": "5ed41797f866362b970d46bead0d3cadb544ec91eb2c65b58d4449dd5f49ce1c",
+     "before": "2c362a16f1a0742ac2420fee05eb4045277e49335ed54919527052d47c58cfff"
+    }
+   },
+   "reason": "Plain words, after the reviewer's confirmation: on a board whose dates are bunched together the new-jobs line says it rests on the board's dates; 'its' or 'their' and 'it' or 'them' by count.",
+   "moved": "No group or score moved.",
+   "previous": "7b4c64694b0da4816c31d6fda2914475a12a76601bd1d052b3f9a4a13c4c925b"
   }
  ],
  "reworded": "11/22/2026: the descriptions in this log were reworded once, to take out internal names and build wording; every fingerprint, date and the order of entries are unchanged, and the chain was computed again over the reworded entries."

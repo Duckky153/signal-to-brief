@@ -234,7 +234,7 @@ test("the size line gives the job board's open postings", () => {
   const r = role({});
   const a = account([r], { postings_total: 1637 });
   const b = brief(a, decide(a, { [r.posting_id]: sure("yes", "driving_or_courier") }, rules, wording), {}, { read_date: "2026-11-21" }, wording);
-  assert.match(b.lines.find((l) => l.tag === "NOT KNOWN").fact, /its job board lists 1,637 open postings in all/);
+  assert.match(b.lines.find((l) => l.tag === "NOT KNOWN").fact, /1,637 open postings on its board/);
 });
 
 test("every change after the lock has one plain line on the page", { skip: !existsSync(new URL("../site/data/lock.json", import.meta.url)) }, () => {
@@ -259,7 +259,8 @@ test("the scores leave out a posting the written rules did not settle, where it 
   const out = new Set(unclear.filter((x) => sign({ ...key[x.posting_id], [x.question]: x.second }) !== sign(key[x.posting_id])).map((x) => x.posting_id));
   const scores = J("../site/data/scores.json");
   const n = Object.keys(key).length - out.size;
-  assert.match(scores.rows[0].note, new RegExp(`^Counted on ${n} of ${Object.keys(key).length}: ${out.size} left out`));
+  assert.match(scores.rows[0].note, new RegExp(`^Counted on ${n} of ${Object.keys(key).length};`));
+  assert.match(scores.disputes_note, new RegExp(`\\(${out.size} of ${Object.keys(key).length} in the first row\\)`));
   const total = (x) => x.split(" · ").reduce((t, part) => t + Number(part.split(" ")[0]), 0);
   for (const col of ["model", "rule", "common"]) assert.equal(total(scores.rows[0][col]), n, col);
   assert.equal(scores.disputes.length, J("../site/data/disputes.json").disputes.length, "every disagreement is listed on the page");
@@ -296,14 +297,14 @@ test("a Brief ready reason says which date it is about: one posting, a job poste
   const again = role({ age: 2, newest_age: 2, oldest_age: 46 });
   assert.match(decide(account([again]), { [again.posting_id]: sure("yes", "field_technician") }, rules, wording).reason.text, /^Newest posting 2 days ago; first published 46 days ago\./);
   const lead = role({ title: "Director of Home Delivery", age: 43, newest_age: 43, oldest_age: 43 });
-  assert.match(decide(account([lead]), { [lead.posting_id]: sure("yes", "delivery_operations_management") }, rules, wording).reason.text, /^New leadership role, first published 43 days ago \(leadership roles count as new for 60 days\)/);
+  assert.match(decide(account([lead]), { [lead.posting_id]: sure("yes", "delivery_operations_management") }, rules, wording).reason.text, /^Leadership role, first published 43 days ago\.$/);
 });
 
 test("the count line counts jobs new by the same rule as the decision: 30 days, or 60 for a leadership role", () => {
   const lead = role({ title: "Director of Home Delivery", age: 43, newest_age: 43, oldest_age: 43 });
   const a = account([lead]);
   const b = brief(a, decide(a, { [lead.posting_id]: sure("yes", "delivery_operations_management") }, rules, wording), {}, { read_date: "2026-11-21" }, wording);
-  assert.match(b.lines.find((l) => /^New jobs/.test(l.fact)).fact, /or 60 for a leadership role\): 1 of 1\./);
+  assert.match(b.lines.find((l) => /^It's new/.test(l.fact)).fact, /^It's new: posted in the last 30 days, or 60 for a leadership role\.$/);
 });
 
 test("among leadership hires, the one that stands out most comes first: a senior title, not posted many times, at the company with the fewest other new jobs", () => {
@@ -326,7 +327,7 @@ test("the brief quotes the tools a posting names and the notes use its reporting
   const b = brief(a, decide(a, { [r.posting_id]: sure("yes", "delivery_operations_management") }, rules, wording), quotes, { read_date: "2026-11-21" }, wording, extra);
   assert.ok(b.lines.some((l) => l.tag === "SAID" && /^Delivery or dispatch software/.test(l.fact) && /Burq/.test(l.fact) && l.quote === quotes[r.posting_id].L029));
   assert.equal(b.notes.to_quote, "Reports to : Senior General Manager");
-  assert.match(b.notes.ask, /"Burq"/);
+  assert.match(b.notes.ask, /Burq/);
   assert.equal(b.notes.do_not_assume, wording.notes.do_not_assume_software, "delivery software named: do not assume they want to switch");
   assert.equal(b.notes.buyers_note, null);
   assert.equal(b.notes.to_note, null, "no procurement or finance in the reporting line");
@@ -344,7 +345,7 @@ test("a quote from another posting at the company names that posting", () => {
   assert.match(tools.fact, /its National Transportation Manager posting/);
   const proof = b.lines.find((l) => l.ai);
   assert.equal(proof.job, null, "the proof line comes from the job the notes stand on");
-  assert.match(proof.fact, /^The AI picked this line from the posting/);
+  assert.match(proof.fact, /picked by the AI from the posting:$/);
 });
 
 test("on a Needs a person company, the proof line comes from the job the row is about, or names its posting", () => {
@@ -359,6 +360,15 @@ test("on a Needs a person company, the proof line comes from the job the row is 
   for (const l of b.lines.filter((x) => x.quote)) {
     const from = l.job || headline;
     assert.equal(l.quote, quotes[[lead, other].find((r) => r.title === from).posting_id].L001, `${l.fact} must be from ${from}`);
+  }
+});
+
+test("every reason has a short sentence for its row, and the full sentence stays for the brief", () => {
+  for (const { a, answers } of fixtures()) {
+    const d = decide(a, answers, rules, wording);
+    assert.ok(d.reason.text && d.reason.short, `${d.reason.code} has both`);
+    assert.ok(d.reason.short.length <= d.reason.text.length, `${d.reason.code}: the row's sentence is not longer`);
+    assert.doesNotMatch(d.reason.short, /\[\w+\]/, "no empty fill");
   }
 });
 
@@ -397,7 +407,6 @@ test("the notes say where the hire fits Nash, from the job's kind or from carrie
   const q = { [r.posting_id]: { L001: "Own all outbound carrier relationships." } };
   const b = brief(a, decide(a, { [r.posting_id]: sure("yes", "delivery_operations_management") }, rules, wording), q, { read_date: "2026-11-21" }, wording);
   assert.equal(b.notes.fits, wording.notes.fits.carriers);
-  assert.match(b.lines.find((l) => l.ai).fact, /The line mentions carriers\./);
   const r2 = role({ title: "HVAC Technician" }), a2 = account([r2]);
   const b2 = brief(a2, decide(a2, { [r2.posting_id]: sure("yes", "field_technician") }, rules, wording), {}, { read_date: "2026-11-21" }, wording);
   assert.equal(b2.notes.fits, wording.notes.fits.field_technician);
@@ -409,8 +418,8 @@ test("a Brief ready reason says how many more new roles qualify, in the right nu
     const a = account(roles);
     return decide(a, Object.fromEntries(roles.map((r) => [r.posting_id, sure("yes", "driving_or_courier")])), rules, wording).reason.text;
   };
-  assert.match(mk(2), / 1 more new role qualifies the same way\.$/);
-  assert.match(mk(3), / 2 more new roles qualify the same way\.$/);
+  assert.match(mk(2), / 1 other new job passes the same checks\.$/);
+  assert.match(mk(3), / 2 other new jobs pass the same checks\.$/);
   assert.doesNotMatch(mk(1), /more new role/);
 });
 

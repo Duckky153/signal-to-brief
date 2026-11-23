@@ -29,21 +29,29 @@
   "The question names only tools from the posting the notes stand on; recruiting jobs left out of old-role lines; a reporting line into procurement or finance gets a note. No company changed group.",
   "Clustered dates described as 'no more than 14 days apart'. No score changed.",
   "Code tidying: the reading script's help text corrected. No score changed.",
-  "Final reviews, decision code: a quote from another posting names it; generic words never listed as tools; delivery software listed first, with its own question; a line on where the hire fits Nash; the procurement note reads only the reporting clause. No company changed group.",
-  "Final reviews, scorer: the top of the page states the result; the version 1 and new split is a small table; plainer notes on which boards can be seen and on owners. No score changed.",
+  "Briefs: a quote from another posting names it; generic words never listed as tools; delivery software listed first, with its own question; a line on where the hire fits Nash; the procurement note reads only the reporting clause. No company changed group.",
+  "Test section: the top of the page states the result; the version 1 and new split is a small table; plainer notes on which boards can be seen and on owners. No score changed.",
   "The title rule's script also runs when its folder's path has a space. No answer changed.",
   "Code tidying in the reading script: the account-wide limit is kept outside the repo. No score changed.",
   "An unused field (a link to a Nash industry page) taken out of the company data. No number changed.",
-  "Re-check fixes, decision code: on a Needs a person company the proof line comes from the job the row is about (Daniels Health). No company changed group.",
-  "Re-check fixes, scorer: the top of the page also states the title rule's result; the boards note no longer repeats itself. No score changed.",
-  "Re-check fixes: up to three tool lines per posting, each with a new name, so Sila's dispatch software is no longer missed. No number changed."
+  "Briefs: on a Needs a person company the proof line comes from the job the row is about (Daniels Health). No company changed group.",
+  "Test section: the top of the page also states the title rule's result; the boards note no longer repeats itself. No score changed.",
+  "Up to three tool lines per posting, each with a new name, so Sila's dispatch software is no longer missed. No number changed.",
+  "Shorter text in the briefs and rows: each reason also has a short sentence for its row; the full sentence stays in the brief. Brief lines shortened. No company changed group.",
+  "Shorter text in the test section: shorter notes in the test table and under it; the detail moved into the folds. No score changed.",
+  "The practice-cutoff note in the questions fold made clearer. No score changed.",
+  "The disagreements note no longer repeats itself. No score changed.",
+  "One line under the test table reworded. No score changed.",
+  "Plain words in the briefs and rows: the code picks the natural sentence and names what the AI read a job as. No company changed group.",
+  "Plain words in the test section. No score changed.",
+  "On boards with bunched dates, the new-jobs line says it rests on those dates. No company changed group."
  ],
  "versions": {
-  "2": "Version 2 reads logistics, transportation, routing and field technician jobs, counts delivery through carriers the company manages, gives leadership roles 60 days, and sends an unsure answer to a person only when the job could still qualify. It was written after version 1's results were seen; 53 of its 78 test postings were also in version 1."
+  "2": "Version 2 reads logistics, transportation, routing and field technician jobs, counts delivery through carriers the company manages, gives leadership roles 60 days, and sends an unsure answer to a person only when the job could still qualify."
  },
  "moved": [
   6,
   17
  ],
- "reworded": "On 11/22/2026 the descriptions inside the log were reworded once, to take out internal names. The files' fingerprints and the dates did not change, but each entry's link to the one before it was computed again, so the chain shows only that no entry was edited after that rewording, not since either freeze."
+ "reworded": "On 11/22/2026 the log's descriptions were reworded once, to take out internal names, and each entry's link to the one before was computed again. Fingerprints and dates didn't change, but the chain now only proves nothing was edited after that day, not since the freezes."
 }

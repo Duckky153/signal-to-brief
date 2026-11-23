@@ -64,12 +64,15 @@ export function decide(account, answersById, rules, wording, t = DEFAULT_THRESHO
   const confirmed = (r) =>
     r.read && r.ans && !r.ans.broken && !r.ans.lineMissing && r.region === "US" && !r.seasonal &&
     r.ans.runsOperation === "yes" && r.ans.opsWork === "yes";
-  const R = (code, values = {}) => ({ code, text: fill(wording.reasons[code], values) });
+  // Each reason has a full sentence for the brief and a short one for the row.
+  const short = (key, values) => ((wording.reasons_short || {})[key] ? fill(wording.reasons_short[key], values) : null);
+  const R = (code, values = {}) => ({ code, text: fill(wording.reasons[code], values), short: short(code, values) });
   let group, reason, rule;
 
   if (account.clustered) {
     group = "needs_person"; rule = 1;
-    reason = R("DATES_CLUSTERED", { a: account.clustered.within_14_days, b: account.clustered.postings });
+    const a = account.clustered.within_14_days, b = account.clustered.postings;
+    reason = R("DATES_CLUSTERED", { a, b, count: a === b ? `All ${b}` : `${a} of ${b}` });
   }
   const newRead = read.filter((r) => r.new);
   if (!group && newRead.some((r) => r.ans.broken || r.ans.lineMissing)) {
@@ -83,8 +86,10 @@ export function decide(account, answersById, rules, wording, t = DEFAULT_THRESHO
     // The sentence says which date it is about: one posting, a job posted again, or a leadership role inside its 60 days.
     const first = best.oldest_age ?? best.age, last = best.newest_age ?? best.age;
     const code = last < first ? "BRIEF_READY_REPOST" : first > days.new ? "BRIEF_READY_LEADER" : "BRIEF_READY";
-    reason = { code: "BRIEF_READY", text: fill(wording.reasons[code], { title: best.title, nd: days_(first), md: days_(last), label: best.date_label.split(",")[0],
-      lead: days.new_leader ?? days.new, more: ready.length > 1 ? ` ${fill(wording.reasons.MORE_READY, { n: ready.length - 1, s: s_(ready.length - 1), v: ready.length === 2 ? "qualifies" : "qualify" })}` : "" }) };
+    const label = best.date_label.split(",")[0];
+    const values = { title: best.title, nd: days_(first), md: days_(last), label, Label: label.charAt(0).toUpperCase() + label.slice(1),
+      lead: days.new_leader ?? days.new, more: ready.length > 1 ? ` ${fill(wording.reasons.MORE_READY, { n: ready.length - 1, s: s_(ready.length - 1), v: ready.length === 2 ? "passes" : "pass" })}` : "" };
+    reason = { code: "BRIEF_READY", text: fill(wording.reasons[code], values), short: short(code, values) };
   }
   // Version 2: an unsure answer sends the company to a person only when it could change the result: the job is new,
   // in the United States, not seasonal, not an old job reposted, and neither answer is already a sure "no".
@@ -100,7 +105,8 @@ export function decide(account, answersById, rules, wording, t = DEFAULT_THRESHO
   if (!group && unsureNew.length) {
     group = "needs_person"; rule = 5;
     const u1 = unsureNew.some((r) => r.ans.runsOperation === "unsure"), u2 = unsureNew.some((r) => r.ans.opsWork === "unsure");
-    reason = R("MODEL_UNSURE", { what: wording.unsure_what[u1 && u2 ? "both" : u1 ? "q1" : "q2"] });
+    const which = u1 && u2 ? "both" : u1 ? "q1" : "q2";
+    reason = R("MODEL_UNSURE", { what: wording.unsure_what[which], ws: (wording.unsure_short || wording.unsure_what)[which] });
   }
   if (!group) {
     group = "skipped"; rule = 6;
@@ -109,11 +115,13 @@ export function decide(account, answersById, rules, wording, t = DEFAULT_THRESHO
     const confirmedNew = confirmedAll.filter((r) => r.new);
     const newest = (list) => Math.min(...list.map((r) => r.newest_age));
     if (read.length && read.every((r) => r.ans.opsWork === "no")) {
-      reason = R("READ_AS_OTHER_WORK", { n: read.length, s: s_(read.length) });
+      const kinds = [...new Set(read.map((r) => KIND_WORDS[r.ans.kind] || "other work"))].map((k) => (/work$/.test(k) ? k : `${k} work`));
+      reason = R("READ_AS_OTHER_WORK", { n: read.length, s: s_(read.length), kinds: kinds.join(" or "), it: read.length === 1 ? "it" : "them" });
     } else if (read.length && read.every((r) => r.ans.runsOperation === "no" || r.ans.opsWork === "no") && read.some((r) => r.ans.runsOperation === "no")) {
       reason = R("NO_DELIVERY_OPERATION_SHOWN");
     } else if (confirmedNew.length && confirmedNew.every((r) => r.older_copies)) {
-      reason = R("OLDER_COPIES_OPEN", { k: confirmedNew.length, s: s_(confirmedNew.length), each: confirmedNew.length > 1 ? "each" : "it" });
+      const k = confirmedNew.length, v = { k, s: s_(k), each: k > 1 ? "each" : "it" };
+      reason = { code: "OLDER_COPIES_OPEN", text: fill(wording.reasons[k === 1 ? "OLDER_COPIES_ONE" : "OLDER_COPIES_OPEN"], v), short: short("OLDER_COPIES_OPEN", v) };
     } else if (roles.some((r) => r.new) && roles.filter((r) => r.new).every((r) => r.seasonal)) {
       reason = R("SEASONAL", { n: roles.filter((r) => r.new).length });
     } else if (!confirmedAll.length && confirmedIgnoringRegion.length) {
@@ -123,7 +131,7 @@ export function decide(account, answersById, rules, wording, t = DEFAULT_THRESHO
     } else if (confirmedAll.length || !roles.some((r) => r.new)) {
       // The same tag either way; the sentence says which postings the age is about.
       reason = confirmedAll.length ? R("NOTHING_NEW", { nd: days_(newest(confirmedAll)) })
-        : { code: "NOTHING_NEW", text: fill(wording.reasons.NOTHING_NEW_UNREAD, { nd: days_(newest(roles)) }) };
+        : { code: "NOTHING_NEW", text: fill(wording.reasons.NOTHING_NEW_UNREAD, { nd: days_(newest(roles)) }), short: short("NOTHING_NEW_UNREAD", { nd: days_(newest(roles)) }) };
     } else if (roles.some((r) => r.new)) {
       // A new job exists, but none could qualify: outside the US, seasonal, a repost, or not read as delivery work.
       reason = R("NONE_QUALIFY");
@@ -158,7 +166,7 @@ export function brief(account, decision, quotes, run, wording, extra = {}) {
   const lead = (job) => (job ? fill(wording.brief.lead_other, { job }) : wording.brief.lead_same);
   if (sureYes(best) && best.ans.q1Line && q(best, best.ans.q1Line)) {
     const quote = q(best, best.ans.q1Line), job = otherJob(best);
-    lines.push({ tag: "SAID", ai: true, job, fact: fill(wording.brief.runs_operation, { lead: lead(job) }) + (/\bcarriers?\b/i.test(quote) ? ` ${wording.brief.mentions_carriers}` : ""),
+    lines.push({ tag: "SAID", ai: true, job, fact: fill(wording.brief.runs_operation, { lead: lead(job) }) + (wording.brief.mentions_carriers && /\bcarriers?\b/i.test(quote) ? ` ${wording.brief.mentions_carriers}` : ""),
       quote, posting_id: best.posting_id, line: best.ans.q1Line, date: best.date, date_label: best.date_label, url: best.url });
   }
   // Tools or systems a posting names, found by plain code from a fixed word list, never generic words: the posting the
@@ -185,10 +193,13 @@ export function brief(account, decision, quotes, run, wording, extra = {}) {
   // Counts leave out the postings set apart below, so the roles, places and postings are about the same postings.
   const roleCount = account.roles_total, places = account.places, posts = account.delivery_type_postings - (account.set_apart || 0);
   const nBoards = account.boards.filter((b) => b.shown).length;
-  lines.push({ tag: "COUNTED", fact: fill(wording.brief.roles, { r: roleCount, p: places, n: posts, rs: s_(roleCount), ps: s_(places), ns: s_(posts),
-    where: nBoards > 1 ? fill(wording.brief.on_boards, { b: nBoards }) : wording.brief.on_board }) });
+  const where = nBoards > 1 ? fill(wording.brief.on_boards, { b: nBoards }) : wording.brief.on_board;
+  lines.push({ tag: "COUNTED", fact: roleCount === 1 && posts === 1 ? fill(wording.brief.roles_one, { where })
+    : fill(wording.brief.roles, { r: roleCount, p: places, n: posts, rs: s_(roleCount), ps: s_(places), ns: s_(posts), where }) });
   const fresh = account.roles.filter((r) => r.new).length; // new: a posting in the last 30 days, or 60 for a leadership title
-  lines.push({ tag: "COUNTED", fact: fill(wording.brief.new_roles, { k: fresh, r: roleCount, d: run.read_date }) });
+  // On a board whose dates are bunched together, "new" rests on those dates, and the line says so.
+  lines.push({ tag: "COUNTED", fact: roleCount === 1 ? (fresh ? wording.brief.new_role_one : wording.brief.old_role_one)
+    : fill(account.clustered ? wording.brief.new_roles_clustered : wording.brief.new_roles, { k: fresh, r: roleCount, d: run.read_date }) });
   // Old roles that matter to a US rep: in the United States, and not read as other work.
   const oldAll = decision.roles.filter((r) => r.newest_age > 90 && r.region === "US" && !(r.read && r.ans && r.ans.opsWork === "no") && !/\brecruit/i.test(r.title || ""));
   for (const r of oldAll.slice(0, 3)) lines.push({ tag: "COUNTED", old: true, fact: fill(wording.brief.old_role, { title: r.title.trim(), nd: days_(r.newest_age) }) });
@@ -196,7 +207,7 @@ export function brief(account, decision, quotes, run, wording, extra = {}) {
   if (account.set_apart) lines.push({ tag: "COUNTED", fact: fill(wording.brief.set_apart, { n: account.set_apart }) });
   if (account.local_brands) lines.push({ tag: "COUNTED", fact: fill(wording.brief.local_brands, { n: account.local_brands.postings_with_another_name, b: account.local_brands.postings }) });
   lines.push({ tag: "NOT KNOWN", fact: fill(wording.brief.not_known, { t: Number(account.postings_total).toLocaleString("en-US"), s: s_(account.postings_total),
-    boards: nBoards > 1 ? wording.brief.its_boards_list : wording.brief.its_board_lists }) });
+    boards: nBoards > 1 ? wording.brief.its_boards_list : wording.brief.its_board_lists, they: "they" }) });
 
   let notes = null;
   const subject = decision.group === "brief_ready" ? decision.ready[0] : decision.candidate;
@@ -217,7 +228,7 @@ export function brief(account, decision, quotes, run, wording, extra = {}) {
     // Only tools named in the posting the notes stand on, never generic words; delivery or dispatch software gets its own question.
     const toolList = [...new Set(toolsOf(subject).flatMap((x) => x.names))].filter((n) => !generic.has(n.toLowerCase()));
     const sw = toolList.filter(isSoftware);
-    const say = (list) => { const qd = list.map((x) => `"${x}"`); return qd.length > 1 ? `${qd.slice(0, -1).join(", ")} and ${qd[qd.length - 1]}` : qd[0]; };
+    const say = (list) => (list.length > 1 ? `${list.slice(0, -1).join(", ")} and ${list[list.length - 1]}` : list[0]);
     const toolWords = say(toolList);
     const proof = subject.ans.q1Line ? q(subject, subject.ans.q1Line) : null;
     const carriers = /\bcarriers?\b/i.test(`${proof || ""} ${reportQuote || ""}`);
@@ -231,9 +242,9 @@ export function brief(account, decision, quotes, run, wording, extra = {}) {
       stand_on: { title, place: (subject.place || "").trim(), date: subject.date, label: subject.date_label, url: subject.url,
         age: subject.age, first_age: subject.oldest_age ?? subject.age },
       ask: sw.length
-        ? fill((wording.notes.ask_software_by_kind || {})[subject.ans.kind] || wording.notes.ask_software, { title, tools: say(sw), in_place: inPlace })
+        ? fill((wording.notes.ask_software_by_kind || {})[subject.ans.kind] || wording.notes.ask_software, { title, tools: say(sw), in_place: inPlace, does: sw.length > 1 ? "do they" : "does it" })
         : toolList.length
-          ? fill((wording.notes.ask_tools_by_kind || {})[subject.ans.kind] || wording.notes.ask_tools, { title, tools: toolWords, in_place: inPlace })
+          ? fill((wording.notes.ask_tools_by_kind || {})[subject.ans.kind] || wording.notes.ask_tools, { title, tools: toolWords, in_place: inPlace, those: toolList.length > 1 ? "do those tools" : `does ${toolList[0]}` })
           : fill((wording.notes.ask_by_kind || {})[subject.ans.kind] || wording.notes.ask, { title, in_place: inPlace }),
       fits: carriers ? wording.notes.fits.carriers : (wording.notes.fits[subject.ans.kind] || null),
       do_not_assume: sw.length ? wording.notes.do_not_assume_software : toolList.length ? wording.notes.do_not_assume_tools : wording.notes.do_not_assume,
@@ -241,9 +252,10 @@ export function brief(account, decision, quotes, run, wording, extra = {}) {
     };
   }
   const steps = [
-    { who: "CODE", text: fill(account.set_apart ? wording.steps.signal_set_apart : wording.steps.signal, { d: run.read_date, n: account.delivery_type_postings, ns: s_(account.delivery_type_postings), a: account.set_apart, b: plural(account.boards.filter((b) => b.shown).length, "board") }) },
-    { who: "MODEL", text: fill(run.model ? wording.steps.read_model : wording.steps.read_key, { k: account.roles_read }) },
-    { who: "CODE", text: fill(wording.steps.checked, { r: account.roles_total, rs: s_(account.roles_total) }) },
+    { who: "CODE", text: fill(account.set_apart ? wording.steps.signal_set_apart : wording.steps.signal, { d: run.read_date, n: account.delivery_type_postings, ns: s_(account.delivery_type_postings), a: account.set_apart, b: plural(account.boards.filter((b) => b.shown).length, "board"),
+      boards: account.boards.filter((b) => b.shown).length > 1 ? "its boards" : "the board" }) },
+    { who: "MODEL", text: account.roles_read === 1 && run.model ? wording.steps.read_model_one : fill(run.model ? wording.steps.read_model : wording.steps.read_key, { k: account.roles_read }) },
+    { who: "CODE", text: fill(wording.steps.checked, { r: account.roles_total, rs: s_(account.roles_total), its: account.roles_total === 1 ? "its" : "their" }) },
     { who: "CODE", text: fill(wording.steps.decided, { rule: decision.rule }) },
   ];
   return { lines, notes, steps };

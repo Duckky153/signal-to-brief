@@ -55,18 +55,15 @@ function signRole(d) {
 
 function render() {
   const { run } = D;
-  $("#eyebrow").textContent = `Public job postings · checked ${usDate(run.read_date)}`;
+  $("#eyebrow").textContent = `Public job postings · checked once, ${usDate(run.read_date)}`;
   $("#sub").textContent =
     `Nash's GTM Engineer posting describes a loop: “A signal comes in, an agent decides what to do with it, the rep gets the account ready to work…” ` +
-    `This is my small version of the first part, on one signal: a company posting a new delivery, dispatch or fleet job. ` +
-    `From one check of ${run.boards_listed} public job boards on ${usDate(run.read_date)}, an AI model answered two fixed questions about up to ${D.rules.cap_roles_per_company} delivery-type postings per company, ` +
-    `plain code (no AI) sorted the companies and wrote each one a short brief for a sales rep. Every quote links to its posting.`;
+    `This is my small version of the first part: an AI reads up to ${D.rules.cap_roles_per_company} job postings per company and code does the rest. A new delivery job posting is only a hint, so the facts in each brief are quotes and counts.`;
   const h = D.scores.headline;
   if (h) {
     const wrong = h.missed + h.alarms, ruleWrong = h.rule.missed + h.rule.alarms;
-    $("#proof").textContent = `Tested on ${h.n} postings from ${h.companies} companies against an answer key that AI wrote from fixed rules: the AI matched ${h.match}, ` +
-      (wrong ? `was sure but wrong on ${wrong}, ` : "was never sure and wrong, ") + `and marked ${h.unsure} unsure. ` +
-      `A plain title rule matched ${h.rule.match}, with ${ruleWrong} wrong. The test run cost ${h.cost}.`;
+    $("#proof").textContent = `The AI matched an AI-written answer key on ${h.match} of ${h.n} postings from ${h.companies} companies, was unsure on ` +
+      (wrong ? `${h.unsure}, and got ${wrong} wrong. ` : `the other ${h.unsure}, and got none wrong. `) + `A simple title rule matched ${h.rule.match} and got ${ruleWrong} wrong. The test cost ${h.cost}.`;
     $("#proof").hidden = false;
   }
   if (D.answers.source !== "model") {
@@ -76,14 +73,6 @@ function render() {
   }
   renderOverview();
   renderRows();
-  const notShown = run.boards_not_shown.length;
-  const multi = D.accounts.filter((a) => a.boards.filter((b) => b.shown).length > 1).map((a) => a.company);
-  $("#after").textContent =
-    `The ${D.list.length} companies above use ${run.boards_with_title} of the ${run.boards_listed} boards` +
-    (multi.length ? ` (${multi.join(", ")} ${multi.length === 1 ? "has" : "have"} two)` : "") + `. ` +
-    `The other ${run.boards_listed - run.boards_with_title} boards had no job title with a delivery word` +
-    (notShown ? `, and ${notShown} of them could not be confirmed as the company's own.` : ".") +
-    ` The market under each company name is my own label. Job titles are shown as posted.`;
   renderTested();
 }
 
@@ -93,7 +82,7 @@ function renderOverview() {
   const card = (g, cls, dot) => `<button class="ov ${cls}" type="button" id="tab-${g}" aria-pressed="${state.tab === g}" aria-controls="board" data-g="${g}">
       <span class="label"><span class="dot ${dot}"></span>${esc(w.groups[g])}</span><span class="num">${c[g]}</span><span class="what detail">${state.tab === g ? "Shown below" : "Show this list"}</span></button>`;
   $("#overview").innerHTML =
-    `<div class="ov static"><span class="label">Companies</span><span class="num">${D.list.length}</span><span class="what detail">with a delivery-word job title, of ${D.run.boards_listed} boards checked</span></div>` +
+    `<div class="ov static"><span class="label">Companies</span><span class="num">${D.list.length}</span><span class="what detail">with a delivery word in a job title, out of ${D.run.boards_listed} job boards</span></div>` +
     card("brief_ready", "", "g") + card("needs_person", c.needs_person ? "amber" : "", "a") + card("skipped", "", "n");
   $("#overview").querySelectorAll("button.ov").forEach((b) => b.addEventListener("click", () => {
     state.tab = b.dataset.g; renderOverview(); renderRows(); $(`#tab-${state.tab}`).focus();
@@ -121,7 +110,7 @@ function renderRows() {
       <span><span class="company">${esc(a.company)}</span><span class="detail block">${esc(a.market)}</span></span>
       <span><span class="tagline"><span class="tag ${cl}">${esc(chip)}</span>${mine}</span>
         <span class="headline block">${esc(r.title)}</span>
-        <span class="detail block">${esc(d.decision.reason.text)}</span></span>
+        <span class="detail block">${esc(d.decision.reason.short || d.decision.reason.text)}</span></span>
       <span class="open" aria-hidden="true">Open →</span>
     </button>`;
   }).join("") || `<p class="detail">No accounts in this group.</p>`;
@@ -134,10 +123,9 @@ function renderTested() {
   const countCells = (x) => String(x).split(" · ").map((p) => `<span class="c">${esc(p)}</span>`).join("");
   const na = '<span class="detail">cannot pick a line</span>';
   const lab = (r) => `<th class="q" scope="row"><span class="strong">${esc(r.label)}</span><span class="detail block">${esc(r.note || "")}${r.shows_little ? " Most postings are a yes, so even always saying yes scores well here." : ""}</span></th>`;
-  $("#score-title").textContent = "How often the AI matched an answer key, next to two simple baselines.";
-  $("#score-caption").textContent = `${s.set_size} postings from ${companies(s.set_companies)}. ` +
-    `Each result is compared with an answer key that AI assistants wrote from written rules before version 2's run; no key writer saw a model answer, though the model had read ${s.split ? s.split.overlap : "some"} of these postings in version 1. ` +
-    `The two baselines use no AI: a title rule that looks only at the job title and department (written with every title in view), and always giving the most common answer.`;
+  $("#score-title").textContent = "Scored against an answer key";
+  $("#score-caption").textContent = `${s.set_size} postings from ${companies(s.set_companies)}. AI assistants wrote the answer key from fixed rules before the run and never saw the model's answers. ` +
+    `Neither baseline uses AI: one reads only the job title and department, the other always gives the most common answer.`;
   $("#score").innerHTML = `<thead><tr><th class="q" scope="col">Question</th><th scope="col">The AI model</th><th scope="col">The title rule</th><th scope="col">Always the common answer</th></tr></thead><tbody>${
     s.rows.filter((r) => !r.span).map((r) =>
       `<tr>${lab(r)}<td class="num">${countCells(r.model)}</td><td class="num">${r.rule == null ? na : countCells(r.rule)}</td><td class="num">${r.common == null ? na : countCells(r.common)}</td></tr>`).join("")
@@ -146,24 +134,25 @@ function renderTested() {
   const q = s.headline ? s.headline.quotes : null;
   const diffs = D.baseDiffs || [];
   const one = diffs.length === 1;
+  const names = diffs.map((x) => x.company).join(", ");
   const diffLine = !diffs.length ? "" : diffs.every((x) => x.ruleMatchesKey)
-    ? ` For the ${one ? "one that differs" : "ones that differ"}, ${diffs.map((x) => x.company).join(", ")}, the title rule sorts ${one ? "it" : "them"} the way the answer key does.`
-    : ` ${one ? "The one that differs" : "The ones that differ"}: ${diffs.map((x) => x.company).join(", ")}.`;
+    ? ` The ${one ? "one that moves" : "ones that move"}, ${names}, would go where the key puts ${one ? "it" : "them"}.`
+    : ` The ${one ? "one that moves" : "ones that move"}: ${names}.`;
   const adds = D.baseSame == null || !q ? "" :
-    `<p class="strong-line">With the title rule's yes or no in place of the AI's answers, ${D.baseSame} of ${D.list.length} companies land in the same group.${esc(diffLine)} ` +
-    `What the AI adds is the proof and the doubt: it picked a line the answer key counts as proof on ${q.good} of ${q.n} postings, which a title rule cannot do, ` +
-    `and it says unsure (below ${Math.round(DEFAULT_THRESHOLDS.q1 * 100)} percent sure) instead of guessing.</p>`;
+    `<p class="strong-line">If the title rule did the sorting, ${D.baseSame} of ${D.list.length} companies would end up where they are.${esc(diffLine)}</p>` +
+    `<p class="strong-line">The AI's main gain is the quote: a good proof line on ${q.good} of ${q.n} postings. Under ${Math.round(DEFAULT_THRESHOLDS.q1 * 100)} percent sure, it says so instead of guessing.</p>`;
   const split = s.split ? `<p>${esc(s.split.note)}</p><div class="score-wrap small"><table class="score"><thead><tr><th class="q" scope="col">Postings</th><th scope="col">The AI model</th><th scope="col">The title rule</th></tr></thead><tbody>${
     s.split.rows.map((r) => `<tr><th class="q" scope="row"><span class="strong">${esc(r.label)}</span></th><td class="num">${countCells(r.model)}</td><td class="num">${countCells(r.rule)}</td></tr>`).join("")}</tbody></table></div>` : "";
-  $("#plain").innerHTML = adds + (agree ? `<p>${esc(`${agree.label} ${agree.model}. ${agree.note}`)}</p>` : "") + split + s.plain.map((p) => `<p>${esc(p)}</p>`).join("");
+  $("#plain").innerHTML = adds + s.plain.map((p) => `<p>${esc(p)}</p>`).join("");
   const folds = [...s.folds];
   if (D.modelDiffs.length || D.groupDiffs.length) {
     folds.unshift({ title: "Where the AI and the answer key differ", html:
       `<ul>${D.modelDiffs.map((m) => `<li>${esc(m)}</li>`).join("")}${D.groupDiffs.map((m) => `<li>${esc(m)}</li>`).join("")}</ul>` });
   }
   if (s.disputes && s.disputes.length) {
-    folds.unshift({ title: `Where the answer key and the second AI disagreed (${s.disputes.length})`, html: `${s.disputes_note ? `<p>${esc(s.disputes_note)}</p>` : ""}<ul>${s.disputes.map((m) => `<li>${esc(m)}</li>`).join("")}</ul>` });
+    folds.unshift({ title: `Where the answer key and the second AI disagreed (${s.disputes.length})`, html: `${agree ? `<p>${esc(`${agree.label} ${agree.model}.`)}</p>` : ""}${s.disputes_note ? `<p>${esc(s.disputes_note)}</p>` : ""}<ul>${s.disputes.map((m) => `<li>${esc(m)}</li>`).join("")}</ul>` });
   }
+  if (s.split) folds.unshift({ title: `Version 2's rules came after version 1's results; ${s.split.overlap} of these postings were in both`, html: split });
   if (s.disagreements && s.disagreements.length) {
     folds.unshift({ title: "Where the title rule and the answer key disagree", html: `<ul>${s.disagreements.map((m) => `<li>${esc(m)}</li>`).join("")}</ul>` });
   }
@@ -183,7 +172,8 @@ function renderTested() {
         open = true;
       } else {
         ci++;
-        const line = esc(notes[ci - 1] || e.reason);
+        const raw = notes[ci - 1] || e.reason;
+        const line = esc(moved.has(ci) ? raw : raw.replace(/\s*No (score|answer|number|company|group|question)[^.]*\.$/, ""));
         if (moved.has(ci)) top.push(`<li value="${ci}"><span class="strong">Version ${esc(version)}.</span> ${line}</li>`); else rest += `<li value="${ci}">${line}</li>`;
       }
     }
@@ -191,9 +181,9 @@ function renderTested() {
     const others = changes.length - top.length;
     folds.push({ title: `Changes after the rules were frozen (${changes.length})`, html:
       `<p>${top.length} of the ${changes.length} changes moved a score or a company:</p><ol>${top.join("")}</ol>` +
-      `<details class="inner"><summary>The other ${others}, which moved no score or group</summary>${rest}</details>` +
+      `<details class="inner"><summary>The other ${others}, none of which moved a score or group</summary>${rest}</details>` +
       (L.reworded ? `<p class="detail">${esc(L.reworded)}</p>` : "") +
-      `<p class="detail">The order (freeze first, test second) can be checked only in my unpublished history. The full log is <a href="${CODE_URL}/blob/main/site/data/lock.json" target="_blank" rel="noopener">site/data/lock.json on GitHub ↗</a>.</p>` });
+      `<p class="detail">Only my unpublished history can show the freeze came before the test. The full log is <a href="${CODE_URL}/blob/main/site/data/lock.json" target="_blank" rel="noopener">site/data/lock.json on GitHub ↗</a>.</p>` });
   }
   $("#folds").innerHTML = folds.map((f) => `<details><summary>${esc(f.title)}</summary>${f.html}</details>`).join("");
   const run = D.run;
@@ -248,17 +238,17 @@ function drawPanel(d, flash, focusSel, flashAt) {
     const job = l.job || r.title.trim();
     // A leading list bullet is a mark of the posting's layout, not a word; it is not shown.
     const quote = l.quote
-      ? `<div class="quote">“${esc(l.quote.replace(/^[·•\-–]\s*/, ""))}”<span class="src">${l.job ? `From the “${esc(l.job)}” posting · ` : ""}${esc(cap(l.date_label.split(",")[0]))} ${esc(usDate(l.date))} (date from the job board) <span class="nw">· <a href="${esc(l.url)}" target="_blank" rel="noopener" aria-label="${esc(`Open the ${job} posting (new tab)`)}">open the posting ↗</a></span></span></div>`
+      ? `<div class="quote">“${esc(l.quote.replace(/^[·•\-–]\s*/, ""))}”<span class="src">${l.job ? `From the “${esc(l.job)}” posting · ` : ""}${esc(cap(l.date_label.split(",")[0]))} ${esc(usDate(l.date))} <span class="nw">· <a href="${esc(l.url)}" target="_blank" rel="noopener" aria-label="${esc(`Open the ${job} posting (new tab)`)}">open the posting ↗</a></span></span></div>`
       : "";
     return `<div class="fact${l.old ? " old" : ""}"><div class="fact-row">${text}<span class="tags">${tags}</span></div>${quote}</div>`;
   }).join("");
   const notes = b.notes ? `
-    <section><h3 class="label">First message</h3><p class="detail">${b.notes.conditional ? "If a person decides it is fine: notes for a rep, not an email." : "Notes for a rep, not an email."}</p>
+    <section><h3 class="label">Notes for a rep</h3>${b.notes.conditional ? `<p class="detail">${esc(w.notes.conditional)}</p>` : ""}
       <div class="notes"><dl>
         <dt>Who to contact</dt><dd>${esc(cap(b.notes.to))}${b.notes.to_quote ? `<div class="detail">“${esc(b.notes.to_quote)}” <span class="nw">· <a href="${esc(b.notes.stand_on.url)}" target="_blank" rel="noopener" aria-label="${esc(`Open the ${b.notes.stand_on.title} posting (new tab)`)}">open the posting ↗</a></span></div>` : ""}${b.notes.to_note ? `<div class="detail">${esc(b.notes.to_note)}</div>` : ""}${b.notes.buyers_note ? `<div class="detail">${esc(b.notes.buyers_note)}</div>` : ""}</dd>
-        <dt>Reason to reach out</dt><dd>${esc(standOn(b.notes.stand_on))} <a href="${esc(b.notes.stand_on.url)}" target="_blank" rel="noopener" aria-label="${esc(`Open the ${b.notes.stand_on.title} posting (new tab)`)}">open the posting ↗</a></dd>
+        <dt>Reason to reach out</dt><dd>${esc(standOn(b.notes.stand_on))} <a href="${esc(b.notes.stand_on.url)}" target="_blank" rel="noopener" aria-label="${esc(`Open the ${b.notes.stand_on.title} posting (new tab)`)}">Open the posting ↗</a></dd>
         <dt>Question to ask</dt><dd>${esc(b.notes.ask)}</dd>
-        <dt>Do not assume</dt><dd>${esc(b.notes.do_not_assume)}</dd>
+        <dt>Don't assume</dt><dd>${esc(b.notes.do_not_assume)}</dd>
       </dl>
       <div class="row-actions"><button class="btn btn-small" type="button" id="copy-notes">Copy the notes</button><span class="detail status" role="status" id="copy-status"></span></div></div>
     </section>` : "";
@@ -271,26 +261,26 @@ function drawPanel(d, flash, focusSel, flashAt) {
       ? [["looks_fine", "Looks fine: I'd work it"], ["not_a_fit", "Skip it, because..."]]
       : [["wrongly_skipped", "Wrongly skipped, because..."]];
   const when = click && Number.isFinite(click.at) ? `, on ${new Date(click.at).toLocaleString("en-US")}` : "";
-  const mineLine = click && click.label ? `Your choice: “${click.label}”${click.reason ? `, because ${click.reason}` : ""}. ` : "";
-  const steps = b.steps.concat(click && click.label ? [{ who: "YOUR CLICK", text: `You marked it “${click.label}”${click.reason ? `, because ${click.reason}` : ""}${when}.` }] : []);
+  const mineLine = click && click.label ? `Marked “${click.label}”${click.reason ? `: ${click.reason}` : ""}. ` : "";
+  const steps = b.steps.concat(click && click.label ? [{ who: "YOUR CLICK", text: `You marked it “${click.label}”${click.reason ? ` (${click.reason})` : ""}${when}.` }] : []);
   $("#panel").innerHTML = `
     <div class="panel-head">
-      <div><h2 id="panel-title" tabindex="-1">${esc(a.company)}</h2><div class="detail"><span>${esc(a.market)} (my label)</span><span class="sep"> · </span><span class="boards">${boards}</span></div></div>
+      <div><h2 id="panel-title" tabindex="-1">${esc(a.company)}</h2><div class="detail"><span>${esc(a.market)}</span><span class="sep"> · </span><span class="boards">${boards}</span></div></div>
       <button class="btn btn-small" type="button" id="panel-close">Close</button>
     </div>
     <div class="panel-body">
       <section>
         <span class="tag ${cl}">${esc(w.tags[d.decision.reason.code])}</span>
         <div class="reason-box"><span class="strong">${esc(r.title)}</span>${esc(d.decision.reason.text)}</div>
-        ${b.notes && b.notes.fits ? `<p class="fits"><span class="strong">${esc(w.notes.fits_label)}${b.notes.conditional ? ", if a person decides it is fine" : ""}:</span> ${esc(b.notes.fits)} <span class="detail">${esc(w.notes.fits_note)}</span></p>` : ""}
+        ${b.notes && b.notes.fits ? `<p class="fits"><span class="strong">${esc(w.notes.fits_label)}:</span> ${esc(b.notes.fits)}</p>` : ""}
       </section>
       <section><h3 class="label">The brief</h3>
-        <p class="detail">From the company's own job postings. QUOTED: words from a posting. AI PICK: the AI chose the line. COUNTED: counted from its job board, no AI. OLD: newest posting over ${D.rules.days.old} days old. NOT KNOWN: this prototype cannot see it. Ages are as of ${esc(usDate(D.run.read_date))}.</p>${facts}</section>
+        <p class="detail">Ages as of ${esc(usDate(D.run.read_date))}. Dates are the job board's own.</p>${facts}</section>
       ${notes}
       <section><h3 class="label">Your call</h3>
         <div class="actions">${actions.map(([k, label]) => `<button class="btn btn-small" type="button" data-act="${k}" aria-pressed="${click && click.mark === k ? "true" : "false"}" data-label="${esc(label.replace("...", "").replace(", because", ""))}">${esc(label)}</button>`).join("")}</div>
         <div id="reasons" hidden><p class="detail why">Why?</p><div class="reasons">${reasons.map((x) => `<button class="btn btn-small" type="button" data-reason="${esc(x)}">${esc(cap(x))}</button>`).join("")}</div></div>
-        <p class="detail"><span class="status" role="status" id="call-status"></span>${esc(mineLine)}Kept in this browser only. In real use, these choices are the labels that would correct the rules. ${click ? '<button class="btn btn-small" type="button" id="clear-mine">Undo my choice</button>' : ""}</p>
+        <p class="detail"><span class="status" role="status" id="call-status"></span>${esc(mineLine)}Kept in this browser only. ${click ? '<button class="btn btn-small" type="button" id="clear-mine">Undo my choice</button>' : ""}</p>
       </section>
       <section><details class="decided"${decidedOpen ? " open" : ""}><summary>How this was decided</summary>
         ${d.decision.ready.length ? `<p>New jobs the AI read as delivery, dispatch or fleet work: ${d.decision.ready.map((x) => `${esc(x.title.trim())} (${esc(KIND_WORDS[x.ans.kind] || "")})`).join("; ")}.</p>` : ""}
@@ -302,7 +292,7 @@ function drawPanel(d, flash, focusSel, flashAt) {
   if (f) f.focus();
   // The status regions exist before their text is set, so screen readers announce the change.
   const copyStatus = $("#copy-status");
-  if (copyStatus) copyStatus.textContent = "Nothing is sent.";
+  if (copyStatus) copyStatus.textContent = "";
   if (flashAt === "call" && flash) setTimeout(() => { const el = $("#call-status"); if (el) el.innerHTML = `<span class="done-dot"></span>${esc(flash)} `; }, 30);
 }
 
@@ -326,9 +316,9 @@ function wirePanel(d, b) {
     const n = b.notes;
     const extra = [n.to_note, n.buyers_note].filter(Boolean).map((x) => ` ${x}`).join("");
     const text = `Company: ${n.company}\nWho to contact: ${cap(n.to)}${n.to_quote ? ` ("${n.to_quote}")` : ""}.${extra}\nReason to reach out: ${standOn(n.stand_on)} ${n.stand_on.url}\nQuestion to ask: ${n.ask}` +
-      `${n.fits ? `\n${D.wording.notes.fits_label} (my reading): ${n.fits}` : ""}\nDo not assume: ${n.do_not_assume}`;
+      `${n.fits ? `\n${D.wording.notes.fits_label}: ${n.fits}` : ""}\nDon't assume: ${n.do_not_assume}`;
     const status = $("#copy-status");
-    try { await navigator.clipboard.writeText(text); status.innerHTML = `<span class="done-dot"></span>Copied. Nothing was sent.`; }
+    try { await navigator.clipboard.writeText(text); status.innerHTML = `<span class="done-dot"></span>Copied.`; }
     catch { status.textContent = "Copy did not work in this browser. Select the notes and copy them yourself."; }
   });
   let pending = null;
@@ -389,7 +379,7 @@ async function main() {
     const sign = (a) => { const r = readAnswers(a); return !r.read ? "not read" : r.runsOperation === "yes" && r.opsWork === "yes" ? "yes" : (r.runsOperation === "no" || r.opsWork === "no") ? "no" : "unsure"; };
     const post = Object.fromEntries(D.postings.map((p) => [p.posting_id, p]));
     const company = Object.fromEntries(D.accounts.map((a) => [a.id, a.company]));
-    const words = { yes: "delivery, dispatch or fleet work at a company that runs it", no: "it is not", unsure: "unsure", "not read": "not read" };
+    const words = { yes: "delivery, dispatch or fleet work at a company that runs it", no: "it isn't delivery work at a company that runs it", unsure: "unsure", "not read": "not read" };
     for (const p of D.postings) {
       const m = sign(byId[p.posting_id]), k = sign(keyAns[p.posting_id]);
       if (m !== k) D.modelDiffs.push(`${company[p.account]}, “${p.title.trim()}”: the AI was ${m === "unsure" ? "unsure" : `sure it is ${words[m]}`}; the key says ${k === "yes" ? `it is ${words.yes}` : words[k]}.`);
@@ -400,7 +390,7 @@ async function main() {
       const kg = keyGroups[d.account.id];
       if (kg === d.decision.group) continue;
       const clause = d.decision.reason.text.replace(/ A person reads the posting\.$/, "").replace(/\.$/, "");
-      D.groupDiffs.push(`${d.account.company}: here in ${wording.groups[d.decision.group]}, because ${clause.charAt(0).toLowerCase()}${clause.slice(1)}. With the answer key's answers, it would be ${wording.groups[kg]}.`);
+      D.groupDiffs.push(`${d.account.company} went to ${wording.groups[d.decision.group]} because ${clause.charAt(0).toLowerCase()}${clause.slice(1)}. With the key's answers it would be ${wording.groups[kg]}.`);
     }
   }
   if (D.baseGroups && D.keyGroups) D.baseDiffs = D.list.filter((d) => D.baseGroups[d.account.id] !== d.decision.group)

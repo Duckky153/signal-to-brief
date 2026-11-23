@@ -47,7 +47,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .topbar { position: relative; z-index: 2; width: calc(100% - 48px); max-width: 1052px; margin: 16px auto 0; display: flex; justify-content: space-between; align-items: center; gap: 16px;
   padding: 10px 14px 10px 24px; border-radius: 999px; background: var(--glass); border: 1px solid var(--hair); }
 .topbar .name { font-weight: 500; font-size: 16px; white-space: nowrap; }
-.topbar .label { font-size: 12px; letter-spacing: 0.1em; }
+.topbar .byline { font-size: 13px; color: var(--text-2); text-align: right; }
 .topbar .short { display: none; }
 
 /* The hero: a faint dot grid, a small label, one big light line, one short paragraph. */
@@ -190,14 +190,12 @@ body.panel-open { overflow: hidden; }
 /* Narrower windows and tablets: the short label in the top bar. */
 @media (max-width: 900px) {
   .topbar .long { display: none; }
-  .topbar .short { display: inline; white-space: normal; }
-  .topbar .label { text-align: right; }
+  .topbar .short { display: inline; }
 }
 
 /* Phone */
 @media (max-width: 760px) {
   .topbar { width: calc(100% - 20px); margin: 10px auto 0; padding: 8px 12px 8px 16px; border-radius: 999px; }
-  .topbar .label { letter-spacing: 0.04em; }
   .quote .src a, .notes a { display: inline-block; padding: 12px 0; margin: -12px 0; }
   .panel-head .sep { display: none; }
   .panel-head .boards { display: block; }
@@ -231,11 +229,15 @@ body.panel-open { overflow: hidden; }
   .notes dt { margin-top: 8px; }
 }
 
+/* The smallest phones: the top bar's label may break anywhere. */
+@media (max-width: 360px) {
+  .topbar .short .nw { white-space: normal; }
+}
+
 /* Small phones */
 @media (max-width: 400px) {
   .ov .label { white-space: normal; }
   h1 { font-size: 32px; }
-  .topbar .label { min-width: 0; letter-spacing: 0; }
-  .topbar .short .nw { white-space: normal; }
+  .topbar .byline { min-width: 0; }
   .runline .seg { white-space: normal; }
 }
